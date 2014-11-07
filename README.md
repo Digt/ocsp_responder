@@ -1,2 +1,0 @@
-ocsp_responder
-==============
