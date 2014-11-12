@@ -1,0 +1,2389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cab9b416-24fc-416b-b4b4-67c573cddc48"
+  name="crypto" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="abe840c6-4975-4c69-b5f7-21afacb006a9">
+      <body>Расширения</body>
+    </comment>
+    <comment
+      Id="1486ead3-0713-4c49-ba8f-b31671d93184">
+      <body>Построение цепочки возможно для сл. объектов:
+Сертификат, Список отзыва (CRL), Список доверия (CTL)
+
+Примеры:
+cer(client) - cer(ca) - cer(ca) - cer(root)
+cer(client) - cer(ca) - cer(root) - CTL - cer (issuer) - cer(ca) -cer(root)
+CTL - cer (issuer) - cer(ca) -cer(root)
+CRL - cer (issuer) - cer(ca) -cer(root)</body>
+    </comment>
+    <comment
+      Id="bcf8a7bb-ba34-4ebf-8d3b-ec90835252c9">
+      <body>Java - hashCode
+DotNet - thumbprint
+
+Скорее всего выполняют одну и ту же функцию</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="831667d6-f63e-4e69-a99e-038ab52273e3"
+        name="Date{readOnly}" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="bbda3572-75f3-40c0-b447-b3f654b92c7d"
+        name="Str" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="73d32992-a774-43a9-bea5-8328abeb05dd"
+        name="string" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7e7a69a1-a9a6-4c04-aa2c-65321a78dd73"
+        name="Key"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Ключ</description>
+        <targetEnds>
+          <association
+            Id="ff574ab4-fa38-4030-9e19-b4858b315671"
+            isDerived="false"
+            sourceEndRoleName="Key"
+            targetEndRoleName="Algorithm"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="b67bd6c1-5822-4dfc-99e3-9f4420a5f6b3"
+              LastKnownName="Algorithm"
+              LastKnownLocation="Package_1415.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="beb6b341-fd99-4b28-b648-89df32b1f936"
+                  name="Key"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0648231c-4fd6-4729-99a6-d100f15e7299"
+                  name="Algorithm"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="3ce95f6a-d3d8-4ffb-807c-d75cd1eee20b"
+            name="algorithm"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="b67bd6c1-5822-4dfc-99e3-9f4420a5f6b3"
+                LastKnownName="Algorithm"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1ae7bbb7-6775-4dfb-aed8-6018ed9a4aaf"
+            name="value"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Значение ключа.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="b69013cf-2071-42e9-bbec-121fc20cb261"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="c46f36f5-07d5-4f5a-8744-436036f5a30e"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="72675eac-fc42-4802-b487-b4a34ea80850"
+                LastKnownName="byte"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d8a43640-d9e0-425e-8b1b-6ae3c47aa180"
+            name="unusedBits"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Количество не используемых битов.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d4130df5-82fb-48b5-96fe-8e02c0a98625"
+        name="PublicKey"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Открытый ключ</description>
+        <generalsInternal>
+          <generalization
+            Id="fcdc6d67-0166-4d70-a9e4-baf0aa2a8dab"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7e7a69a1-a9a6-4c04-aa2c-65321a78dd73"
+              LastKnownName="Key"
+              LastKnownLocation="Package_1015.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="d770a605-1e75-4648-bc21-a5eb595489cb"
+            name="checkPrivateKey"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Проверяет, что заданный закрытый ключ соответствует открытому ключу.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="97e48851-f547-48f7-800a-86ca6b7c44d0"
+                  name="privateKey"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9e702104-3ab0-4d2d-9705-4975e13f23ae"
+                      LastKnownName="PrivateKey"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d87acf7f-212f-41e2-809f-12862bc3f006"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9e702104-3ab0-4d2d-9705-4975e13f23ae"
+        name="PrivateKey"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Закрытый ключ</description>
+        <generalsInternal>
+          <generalization
+            Id="988904e4-88af-41d7-a515-07a8fa26529e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="7e7a69a1-a9a6-4c04-aa2c-65321a78dd73"
+              LastKnownName="Key"
+              LastKnownLocation="Package_1015.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6e0e613a-c061-469c-b0d2-6c0e5de4018c"
+            name="checkCertificate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Проеряет, что заданный сертификат соответствует ззакрытому ключу.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="81b0f49c-6aa7-41e4-b653-a27b7f2be5de"
+                  name="certifictae"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="5724f047-a76d-418c-a339-5b9b276f87c0"
+                      LastKnownName="X509Certificate"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d3451b93-b663-4b4f-bc55-fd977b37145e"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="9b18a1de-ea5f-4379-9569-1983f96add2f"
+            name="checkPublickKey"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Проверяет, что заданный открытый ключ соответствует закрытому ключу.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="89f58a63-ce77-4c85-a2a8-c8f1bc74f333"
+                  name="publicKey"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d4130df5-82fb-48b5-96fe-8e02c0a98625"
+                      LastKnownName="PublicKey"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ab4447b-bd96-47b4-a554-a75568724c2b"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="72675eac-fc42-4802-b487-b4a34ea80850"
+        name="byte" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4e2cd9dc-f60e-45a8-b6ca-89d2287f007f"
+        name="X509Store"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Класс для чтения и записи x509 Certificate, CRL и CTL хранилища.</description>
+        <targetEnds>
+          <association
+            Id="6f2319aa-832d-4809-bc75-c8afea95c5cb"
+            isDerived="false"
+            sourceEndRoleName="X509Store"
+            targetEndRoleName="X509StoreItem"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+              LastKnownName="PKIObject"
+              LastKnownLocation="Package_1415.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac1dea2d-9302-4168-a406-306a84577214"
+                  name="X509Store"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d45ef024-c15b-441c-8d1d-7c7da0382ae6"
+                  name="X509StoreItem"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1a36d10d-84f4-4e8a-a216-656f654d6dfd"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d6892b9a-2cad-47af-ad2f-9e427cfe8d27"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="3fa6fa23-e6fa-4652-acdd-23f54cdd4929"
+            name="location"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Месторасположение харнилища.</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="80ac2548-9041-4f00-ae97-563a7b22984b"
+                LastKnownName="X509StoreLoaction"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ee561822-7109-49e7-b9de-0adc2dbec504"
+            name="name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Название хранилища.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="33984725-2daa-40c0-bcc0-c66095f8d893"
+            name="items"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Коллекция элементов хранилища.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="7730d4c5-dc50-4123-bd25-b53b993a2414"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="0a75ae82-4fa1-41da-85bc-5699df0e49ec"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                LastKnownName="PKIObject"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="788e9bac-526b-40c3-9d8d-5f4dc71201d8"
+            name="openStore"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Открывает хранилище.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cc4b2358-62f2-4aeb-a8ae-649c59621f9a"
+                  name="location"
+                  direction="In"
+                  isUnique="false">
+                  <description>Месторасположение хранилища.</description>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="80ac2548-9041-4f00-ae97-563a7b22984b"
+                      LastKnownName="X509StoreLoaction"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="19db8695-aa94-4154-a3bf-5fa4b11eeb1b"
+                  name="name"
+                  direction="In"
+                  isUnique="false">
+                  <description>Имя хранилища.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8be86325-a1d6-45bf-aeab-d54c86512fe3"
+                  name="readOnly"
+                  direction="In"
+                  isUnique="false">
+                  <description>Режим только для чтения.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b7dba51d-c9c3-46db-9484-8cff7254bf61"
+            name="getItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Возвращает коллекцию элементов PKIObject.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="654e8532-84ed-47d5-8988-0ab8ba4a7dcb"
+                  direction="Return"
+                  isUnique="false">
+                  <description>Коллекция объектов PKIObject.</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4246e6b8-97d9-4acb-9d79-39d37641ad18"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c49e89eb-733e-498f-9fa7-5ef61967a67e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="06d6783b-4077-4e5b-8f25-957e2bac6827"
+                  name="selector"
+                  direction="In"
+                  isUnique="false">
+                  <description>Коллкция объектов критерия поиска.</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ed4d4823-1491-4969-a490-8d0715feac3e"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="85dbca01-dc3f-4fc2-b541-ff146890e8d9"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1ead733f-64be-4c1b-bd01-ee7f3cf416d7"
+                      LastKnownName="X509StoreSelector"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bab27b7e-0cdb-4457-99c1-9a278931e8be"
+            name="closeStore"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Закрывет хранилище.</description>
+          </operation>
+          <operation
+            Id="6b7ff523-3a58-4763-bcf7-61477ca5e587"
+            name="add"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Добавление элемента в хранилище. Если тип элемента X509Certificate, то он связывается с заданным закрытм ключом.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="22a3702b-1fb8-4df5-bd3e-88342cca87ba"
+                  name="item"
+                  direction="In"
+                  isUnique="false">
+                  <description>Объект PKIObject.</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c6147fee-09e3-4a8c-b51f-c50083ec7e13"
+                  name="privateKey"
+                  direction="In"
+                  isUnique="false">
+                  <description>Закрытый ключ.</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9e702104-3ab0-4d2d-9705-4975e13f23ae"
+                      LastKnownName="PrivateKey"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="da3102f3-79f5-40ec-b360-ff7b41e613a9"
+            name="remove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Удаляет элемент из коллеции элементов хранилища.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fec6d9f4-fb35-4ab5-884f-2a01e6c92780"
+                  name="item"
+                  direction="In"
+                  isUnique="false">
+                  <description>Элемент, который необходимо удалить из коллекции элементов хранилища.</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e3c862af-2cb2-45f6-ab34-ce554670279c"
+            name="deleteStore"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Удаляет хранилище.</description>
+          </operation>
+          <operation
+            Id="73fa23bf-ffdb-42fb-b9e4-056f957679b1"
+            name="create"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Создает новое хранилище с указанным именем.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2ea44ce1-c097-4039-a2d5-85bcc5c00383"
+                  name="name"
+                  direction="In"
+                  isUnique="false">
+                  <description>Имя создаваемого хранилища.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4dfb776c-0b6f-4b89-b889-3076771b08e0"
+            name="load"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Открывает хранилище из файла.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8c3c8304-f999-445a-bc7b-899d32447eee"
+                  name="fileNAme"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cf002180-8be8-4246-be6c-dbd4af0d52af"
+            name="save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Сохраняет хранилище в файл по заданным параметрам.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1a6015b7-038a-49a3-a842-febf91b445a3"
+                  name="params"
+                  direction="In"
+                  isUnique="false">
+                  <description>Пармаетры для сохранения хранилища в файл.</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="74b2a9b7-d026-42af-9b42-15e826e0d423"
+                      LastKnownName="X509StoreSaveParapeters"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2919d14b-b902-4096-ac4b-0ecbea89d7ca"
+            name="getItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Возвращает коллекцию элементов PKIObject.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="00fc0955-007c-4998-8589-196b41bc7ba2"
+                  direction="Return"
+                  isUnique="false">
+                  <description>Коллекция объектов PKIObject.</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a36e0e87-3192-4ac0-8278-d747a89c612f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bdd82dd6-35c4-4a14-ad43-58a98a6db49c"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7c2d492c-96ef-4249-a9aa-76a77fe0baa6"
+                  name="index"
+                  direction="In"
+                  isUnique="false">
+                  <description>Индекс элемента в коллекции элементов хранилища.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7d3afd23-0d16-48fd-92ae-0ccf59b4602c"
+            name="getItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Возвращает коллекцию элементов PKIObject.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="43b109b5-3e13-4d44-9152-7653018f3098"
+                  direction="Return"
+                  isUnique="false">
+                  <description>Коллекция объектов PKIObject.</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="485ccb6d-72d6-4951-8644-164ab82f7071"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="5d849e1d-3b89-43c1-9a53-2a2b8ddc29bc"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d88fac1c-6d86-4159-9b68-0fd77fb6f3c2"
+            name="getItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Возвращает коллекцию элементов PKIObject.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="86f61ddb-a994-46c8-a1b9-3c5f1fd2ecd1"
+                  direction="Return"
+                  isUnique="false">
+                  <description>Коллекция объектов PKIObject.</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b78b5a9c-0685-4a91-9a24-17585cfc7dc5"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d9265028-a8fc-4dec-9623-bc05697f4b01"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fd700437-4ba5-4466-af94-ebc24ce5f30f"
+                  name="selector"
+                  direction="In"
+                  isUnique="false">
+                  <description>Объект задаующий критерий поиска.</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1ead733f-64be-4c1b-bd01-ee7f3cf416d7"
+                      LastKnownName="X509StoreSelector"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1ead733f-64be-4c1b-bd01-ee7f3cf416d7"
+        name="X509StoreSelector"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет критерии для поиска элементов в хранилище X509Store или коллеции элементов PKIObject.</description>
+        <ownedAttributesInternal>
+          <property
+            Id="acce350b-ae0a-4b10-aeed-ccd6c8cb25f5"
+            name="findType"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Атрибут элемента поиска.</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="79e55606-bb0e-4c9b-8518-7183454e0728"
+                LastKnownName="X509FindType"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="24d4cc7c-4cc0-416e-a196-5e2f7d0f8eb5"
+            name="value"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Сравниваемое значение.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c1702b4b-9147-4204-a54a-f193810fd453"
+                LastKnownName="Object"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e53575e0-d14b-4a57-9aa5-0fb437b1b675"
+            name="operator"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Оператор сравнения.</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="69a70a9c-7b91-40e9-85be-964dd699800f"
+                LastKnownName="RelationalOperator"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="79e55606-bb0e-4c9b-8518-7183454e0728"
+        name="X509FindType"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Перечисление атрибутов элементов для поиска.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="7c6b0c8d-abcf-455c-9f3e-078e159be969"
+            name="findByApplicationPolicy" />
+          <enumerationLiteral
+            Id="f4c7e890-87b0-4362-82bb-3fae58a72de4"
+            name="findByCertificatePolicy" />
+          <enumerationLiteral
+            Id="91757572-ebd9-4136-8c32-8b38aa73dcf4"
+            name="findByExtension" />
+          <enumerationLiteral
+            Id="9b2b3d83-52c6-4035-a533-ec21ae57ae28"
+            name="findByIssuerDistinguishedName" />
+          <enumerationLiteral
+            Id="c470fba5-ba0a-4f29-ac50-c80f8ecf234e"
+            name="findByIssuerName" />
+          <enumerationLiteral
+            Id="12fcb0d2-42d1-4ae3-813e-a3909a993044"
+            name="findByKeyUsage" />
+          <enumerationLiteral
+            Id="fea886eb-a6ff-40dd-bc17-685d85e5899a"
+            name="findBySerrialNumber" />
+          <enumerationLiteral
+            Id="26780fc6-c4c6-489f-846c-f48348f30dc4"
+            name="findBySubjectDistinguishedName" />
+          <enumerationLiteral
+            Id="70d7142c-305b-4a66-b9b1-da6bf2f61fae"
+            name="findBySubjectKeyIdentifier" />
+          <enumerationLiteral
+            Id="b9ef45ee-8829-4a27-b5dc-b6cec5aa97a0"
+            name="findBySubjectName" />
+          <enumerationLiteral
+            Id="13e90674-3e4a-4304-9a43-3f386fb42bb5"
+            name="findByTemplateName" />
+          <enumerationLiteral
+            Id="135be1e6-30bf-43bb-adbd-584b7fde10ea"
+            name="findByThumbprint" />
+          <enumerationLiteral
+            Id="9ff97839-b3e0-4ae2-bae4-4345c43a87da"
+            name="findByTimeExpired" />
+          <enumerationLiteral
+            Id="d6a5226e-ac6c-4a50-9c74-e6bb056ba6ef"
+            name="findByTimeNotYetValid" />
+          <enumerationLiteral
+            Id="ece219bd-95d8-489b-9a64-c7dacf4a74a0"
+            name="findByTimeValid" />
+          <enumerationLiteral
+            Id="7ef9b95c-aff4-4246-901d-0961bae6ccc9"
+            name="findByPKIType" />
+          <enumerationLiteral
+            Id="917f946b-9a43-48eb-84a6-d51978a5b848"
+            name="findByValid" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="80ac2548-9041-4f00-ae97-563a7b22984b"
+        name="X509StoreLoaction"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Перечисление месторасположений хранилища.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="4d48dfa8-6b69-4640-83a9-621ca71ea3d4"
+            name="CardReader">
+            <description>Подключаемое устройство.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="e0196886-88e2-44ab-a170-ee3d94209d97"
+            name="Local">
+            <description>Локальное хранилище.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="bf88bbd7-6350-45bc-bf23-a05c9dc4b05b"
+            name="Memory">
+            <description>Хранилище в памяти.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="8054b688-1ef7-4c29-8606-cb1a4c104f67"
+            name="Remote">
+            <description>Удаленное хранилище.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="ad8cc445-0276-4890-86ff-bc6218e7e3cb"
+            name="System">
+            <description>Системное хранилище.</description>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="74b2a9b7-d026-42af-9b42-15e826e0d423"
+        name="X509StoreSaveParapeters"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет параметры для сохранения хранилища в файл.</description>
+        <ownedAttributesInternal>
+          <property
+            Id="c90b7cb1-aa4c-47d6-8396-fde77ebaebc1"
+            name="fileName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Иммя сохраняемого файла.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8b8a5727-0fbf-4084-b38a-1a7da829813c"
+            name="items"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Коллекция сохраняемых элементов.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="c5a199c0-4869-4654-9fac-2d6fb4e79525"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="4d6ef28f-fea5-49ab-8ebf-a8db662472ec"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                LastKnownName="PKIObject"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="cb6b116b-b9e8-4ab1-8bf1-47d2a0c43d48"
+            name="password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Пароль для защиты файла в формате PFX.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="729cda69-6966-440d-a504-b5fddfde9759"
+            name="saveAs"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Формат сохраняемого файла.</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="c4188f4d-42fe-47cb-8067-0e453cf9e7a5"
+                LastKnownName="X509StoreSaveAs"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a554be27-7f96-445a-9dd9-0bce862c1a63"
+            name="exportFlag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Флаг, определяющий, будут ли игнорироваться ошибки при экспорте не экспортируемых ключей.</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="625a8a82-79b3-4903-9ad7-a5055901d5eb"
+                LastKnownName="X509StoreExportFlag"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="c4188f4d-42fe-47cb-8067-0e453cf9e7a5"
+        name="X509StoreSaveAs"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Перечисление форматов файлов для сохранения хранилища.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="aee16e5a-45c8-454e-905d-2c8d8629dbee"
+            name="PFX" />
+          <enumerationLiteral
+            Id="86ca19a6-91f8-4e84-84fa-cc57d7e1b2b2"
+            name="PKCS7" />
+          <enumerationLiteral
+            Id="f22d6bdd-6f3b-45d0-9c85-b9acb220046d"
+            name="SST" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="625a8a82-79b3-4903-9ad7-a5055901d5eb"
+        name="X509StoreExportFlag"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Перечисление параметров экспорта хранилища в файл.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="63c5fcb8-715c-4998-8291-728202f0663b"
+            name="default">
+            <description>Не игнорировать возникающие ошибки при экспорте не экспортируемого закрытого ключа.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="7d8d9dd0-e8fa-4216-aa83-23d3adaca9c8"
+            name="ignorePrivateKeyNotExportable">
+            <description>Игнорировать возникающие ошибки при экспорте не экспортируемого закрытого ключа.</description>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="69a70a9c-7b91-40e9-85be-964dd699800f"
+        name="RelationalOperator"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Операторы сравнения.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="604dea53-f1d3-436d-88d3-2df76a6e3dc4"
+            name="less">
+            <description>Меньше</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="707bfa0e-0ef3-4f93-b810-01351c9ae23e"
+            name="greater">
+            <description>Больше</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="c9693a31-0e78-4f72-9a8e-c2f255526910"
+            name="equals">
+            <description>Равно</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="8aedb713-087d-4c9e-9b91-9abdad80052f"
+            name="notEquals">
+            <description>Не равно</description>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d288a284-d619-48b7-aa5d-fdb1d5fc4e5c"
+        name="X509StoreHelper"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Помощник для хранилища X509Store.</description>
+        <ownedOperationsInternal>
+          <operation
+            Id="29840ba0-67c4-49e4-af59-8a5625835f45"
+            name="find"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Возваращет коллецию элементов PKIObject из заданной коллеции элементов.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1d1135f5-2679-4d55-a5e0-2a067a4226bc"
+                  direction="Return"
+                  isUnique="false">
+                  <description>Коллекция элементов PKIObject</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="19c0cdb3-ab23-4d0a-ac9b-96f151dd6034"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ae1f143f-65ad-4d4a-b7b0-b9e3ff5bd989"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5797bf8b-2816-4054-92b7-618c17f80622"
+                  name="selector"
+                  direction="In"
+                  isUnique="false">
+                  <description>Парметры поиска</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1ead733f-64be-4c1b-bd01-ee7f3cf416d7"
+                      LastKnownName="X509StoreSelector"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="11341ccf-893b-4863-8aea-fab3bb6ade13"
+                  name="items"
+                  direction="In"
+                  isUnique="false">
+                  <description>Коллекция элементов среди которых осуществляется поиск.</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="4148aafb-9795-4c18-adb9-c72e53baef5f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bd4feeb6-0b3a-46bc-9579-d95184f328df"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c6dae246-d9eb-4ae9-807e-4942904eb30e"
+            name="find"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Возваращет коллецию элементов PKIObject из заданной коллеции элементов.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d27b1265-d0eb-4b41-bf56-37bc9c0adf51"
+                  direction="Return"
+                  isUnique="false">
+                  <description>Коллекция элементов PKIObject</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1789f8e9-09b5-47cf-a622-12f0aded65e9"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8733c5f2-3d24-4856-9dd8-a39280112426"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bd4113f3-897b-4b82-a6ca-3267a0998311"
+                  name="selector"
+                  direction="In"
+                  isUnique="false">
+                  <description>Коллекция параметров поиска.</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3814fd31-fe57-4906-8b41-d59d10cc6029"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="04730495-c67a-42c0-a9af-73fbe0dab085"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1ead733f-64be-4c1b-bd01-ee7f3cf416d7"
+                      LastKnownName="X509StoreSelector"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e73d8b87-785d-4d4d-bd84-d40c2b3c2def"
+                  name="items"
+                  direction="In"
+                  isUnique="false">
+                  <description>Коллеция элементов среди которых осуществляется поиск.</description>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f368f64a-2a9f-4c3d-917d-6cdc55650d96"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2c8742c9-fa10-4c9e-97b7-f7b53aff2315"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c0286bc-ec69-44b2-996f-659b801280c8"
+                  name="operator"
+                  direction="In"
+                  isUnique="false">
+                  <description>Логический оператор для коллекции параметров поиска</description>
+                  <type_NamedElement>
+                    <enumerationMoniker
+                      Id="1ac2f308-7495-4950-9260-a91feddce668"
+                      LastKnownName="BooleanOperator"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="1ac2f308-7495-4950-9260-a91feddce668"
+        name="BooleanOperator"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Перечисление логических операторов.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="99df971b-9318-4c45-b024-93d07e43d23c"
+            name="and">
+            <description>Логическое И</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="ee1c7230-bf69-422c-84da-785c5708facb"
+            name="or">
+            <description>Логическое ИЛИ</description>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4239931d-d7c1-4986-8352-f3dc23d498ef"
+        name="X509CertPath"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет цепочку элементов PKIObject.</description>
+        <targetEnds>
+          <association
+            Id="56e48e59-6353-4924-93f1-3296c4356658"
+            isDerived="false"
+            sourceEndRoleName="X509CertPath"
+            targetEndRoleName="X509CertPathElement"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bf1b9262-bcef-4b57-a375-20ae605e6530"
+              LastKnownName="X509CertPathElement"
+              LastKnownLocation="Package_1015.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="342da3a7-3d07-4c15-89b0-318f56dc8210"
+                  name="X509CertPath"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8d6758b4-06fd-45ff-ab74-cf2ab6611aa9"
+                  name="X509CertPathElement"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c4e564b3-b788-490a-a0c0-a310821f00c1"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="cbd9e2de-cc1c-48df-abf6-62f5b5f93076"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ec7ec73a-b226-48af-9970-ed4e1e2e665a"
+            isDerived="false"
+            sourceEndRoleName="X509CertPath"
+            targetEndRoleName="X509CertPathStatus"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a50e61db-c4b2-4bc2-bf52-1e9bb7b931a1"
+              LastKnownName="X509CertPathStatus"
+              LastKnownLocation="Package_1015.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e8c98549-5b43-439d-9833-33ee016d7953"
+                  name="X509CertPath"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3128bdae-a74b-4f13-8380-d4555d17babb"
+                  name="X509CertPathStatus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="7c3f9ff6-00aa-43f3-95ad-544a49a1595d"
+            name="elements"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Последовательный набор элементов цепочки.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="7ce5585f-555b-4c21-bb21-405548427c18"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="fe315c35-0dc7-44ae-aa47-6cff818f51ad"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                LastKnownName="PKIObject"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b941a150-befa-4dbb-a9d1-9112d00ec39a"
+            name="status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Статус цепочки элементов.</description>
+            <type_NamedElement>
+              <classMoniker
+                Id="a50e61db-c4b2-4bc2-bf52-1e9bb7b931a1"
+                LastKnownName="X509CertPathStatus"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bf1b9262-bcef-4b57-a375-20ae605e6530"
+        name="X509CertPathElement"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет элемент цепочки.</description>
+        <targetEnds>
+          <association
+            Id="dd5aa366-9f3b-420b-a7a0-5e36a621038c"
+            isDerived="false"
+            sourceEndRoleName="X509CertPathElement"
+            targetEndRoleName="X509CertPathStatus"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a50e61db-c4b2-4bc2-bf52-1e9bb7b931a1"
+              LastKnownName="X509CertPathStatus"
+              LastKnownLocation="Package_1015.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="34cbfbdc-4a4d-4ffc-b86e-17b91d37a7b8"
+                  name="X509CertPathElement"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a52ed963-cb57-49d0-8f8a-bcbc3be02eec"
+                  name="X509CertPathStatus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="45405bb8-4247-4d12-856b-0f4b7a571ab4"
+            name="element"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Элемент цепочки.</description>
+            <type_NamedElement>
+              <classMoniker
+                Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                LastKnownName="PKIObject"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="5f212e1c-ad71-4301-843b-3ae1939dca05"
+            name="status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Статус элемента цепочки.</description>
+            <type_NamedElement>
+              <classMoniker
+                Id="a50e61db-c4b2-4bc2-bf52-1e9bb7b931a1"
+                LastKnownName="X509CertPathStatus"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c807cafd-5984-4284-ba1f-2d0d0cf9a11b"
+        name="X509CertPathBuilder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет класс для построения цепочки для PKIObject с последующей проверкой.</description>
+        <targetEnds>
+          <association
+            Id="69febd85-3f71-4f36-952e-24d1d7899f54"
+            isDerived="false"
+            sourceEndRoleName="X509CertPathBuilder"
+            targetEndRoleName="X509CertPath"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="4239931d-d7c1-4986-8352-f3dc23d498ef"
+              LastKnownName="X509CertPath"
+              LastKnownLocation="Package_1015.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9a0cae1c-6d7c-4144-b091-3b720398d704"
+                  name="X509CertPathBuilder"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b05c6f04-a6cb-4b55-993d-f33c3723ba1b"
+                  name="X509CertPath"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7207759f-97d1-48b7-b194-99dc39fd121f"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="10021749-411a-4b91-8376-7b6ad3b15b8e"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="0ff69bb7-a5ca-4498-8751-b7475a15ff25"
+            name="certPaths"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Коллекция цепочек</description>
+            <lowerValueInternal>
+              <literalString
+                Id="0c93edde-cbe7-46c4-a017-03135187abf2"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="c66c2b08-581a-463c-8334-408526cf95e5"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4239931d-d7c1-4986-8352-f3dc23d498ef"
+                LastKnownName="X509CertPath"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="1a6657e0-a5fa-47fb-b6ce-f247c745ee91"
+            name="build"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Построение цепочки и ее проверка.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d2ca512a-2837-4e34-a329-94a7bcbfee70"
+                  name="element"
+                  direction="In"
+                  isUnique="false">
+                  <description>Элемент для которого необходимо построить цепочку.</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="86b175d9-9d34-42d3-b211-492558bb05a7"
+                      LastKnownName="PKIObject"
+                      LastKnownLocation="Package_1415.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="209d6b62-224b-4eea-897e-3c67fd0468fb"
+                  name="params"
+                  direction="In"
+                  isUnique="false">
+                  <description>Параметры для построения цепочки</description>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f60a40ad-b291-4fb0-99cf-6c2d0a3c3ce8"
+                      LastKnownName="X509Parameters"
+                      LastKnownLocation="Package_1015.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f60a40ad-b291-4fb0-99cf-6c2d0a3c3ce8"
+        name="X509Parameters"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет набор параметров для постраения цепочки.</description>
+        <ownedAttributesInternal>
+          <property
+            Id="adb52709-552e-4b1c-801b-645b10d394a6"
+            name="extraStores"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Коллкция вспомогательных хранилищ для построения цепочки</description>
+            <lowerValueInternal>
+              <literalString
+                Id="799e9a21-ea75-4475-a216-31166f4edfe2"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="9e1b4d85-3ea0-4cd6-879e-2cd92ad5214e"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4e2cd9dc-f60e-45a8-b6ca-89d2287f007f"
+                LastKnownName="X509Store"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6ac52d92-e03c-4a4d-bcd2-f1e41f8c92c6"
+            name="trustedStores"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Коллеция доверенных хранилищ</description>
+            <lowerValueInternal>
+              <literalString
+                Id="b35d55ed-fd03-4512-a7e9-d0cb6c7708a7"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="4e0fc870-5345-4690-af5e-0777edbf9858"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4e2cd9dc-f60e-45a8-b6ca-89d2287f007f"
+                LastKnownName="X509Store"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="83ca3376-4d92-40d0-ad9b-19a4547b631a"
+            name="verificationDate"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Дата отнносительно который происходит проверка.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="60a81090-202a-4b69-816f-7def5b398ad9"
+                LastKnownName="Date"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="625921a4-938d-4a76-93e0-21abded01104"
+            name="verificationFlags"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Перечисление условий проверки</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="bfcc7e51-7e2c-4284-9a80-19ec454fa659"
+                LastKnownName="X509CertPathVerificationFlags"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="93ac3c5d-80c3-416c-a5a7-f04e0d6d7511"
+            name="urlRetrievalTimeout"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Максимальное время ожидания для запроса списка отзыва сертификатов.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7f216025-acb4-4c5e-bb6d-9773397d98f0"
+            name="urlOCSPs[*]"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Коллеция URL адресов OCSP</description>
+            <lowerValueInternal>
+              <literalString
+                Id="2748dd01-5f84-4272-ba10-a3702953e808"
+                name="Lower"
+                value="1" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="83ed9a40-98b0-464c-a7a7-b51b0389a748"
+                name="Upper"
+                value="1" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1a024470-c8a4-4d41-96f6-55b9802563e3"
+            name="applicationPolicy"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает коллекцию идентификаторов объекта (OID), задающих политики применения и расширенные использования ключа, поддерживаемые сертификатом.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="24f3f227-5312-409b-a713-84b340910a61"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="0588a8fd-ec65-4302-995f-f59a720dfa38"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="aec1c0b1-3a4c-485f-ac22-933ed254fdca"
+                LastKnownName="OID"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="7e7245fd-f27e-48d3-b8b2-ae6c272d4807"
+            name="certificatePolicy"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает коллекцию идентификаторов объекта (OID), задающих политики сертификатов, которые поддерживаются сертификатом.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="10935822-e1b0-4822-8cfb-2fdb9b56f138"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="1382642a-08a2-4cd5-aec0-b83ed7a3cbc7"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="aec1c0b1-3a4c-485f-ac22-933ed254fdca"
+                LastKnownName="OID"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="14acd834-a2eb-45ec-9313-93e4d45889a0"
+            name="revocationMode"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Режим для списков отзыва сертификатов.</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="90a5853a-0582-4d23-9d55-e91b5ffd5a84"
+                LastKnownName="X509RevocationMode"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d5c2e2ce-e366-4ba4-9920-66871e27fa60"
+            name="proxy"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Proxy настройки.</description>
+          </property>
+          <property
+            Id="bcd809a0-ea19-4dcd-8df1-a18f3f8d33ad"
+            name="OTCPTimeout"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Максимальное время ожидания для запроса OTCP</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="c0425131-a8f4-48e7-a4e3-82b74194b57e"
+            name="revocationFlag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Значения для спиксов отзыва сертификатов.</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="07ed722e-41f3-4afd-9e0a-9947c8a9f3e7"
+                LastKnownName="X509RevocationFlag"
+                LastKnownLocation="Package_1415.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a50e61db-c4b2-4bc2-bf52-1e9bb7b931a1"
+        name="X509CertPathStatus"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет статус элемента цепочки.</description>
+        <targetEnds>
+          <association
+            Id="7055f89b-b5f5-4aef-ab72-e42bc0e86ee0"
+            isDerived="false"
+            sourceEndRoleName="X509CertPathStatus"
+            targetEndRoleName="X509CertPathStatusInformation"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d661d459-8a42-415b-8ba3-37339bbf9675"
+              LastKnownName="X509CertPathStatusInformation"
+              LastKnownLocation="Package_1015.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="89c91fc0-0f7e-4d7c-818e-8ec57904c62e"
+                  name="X509CertPathStatus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4042300-a21c-413a-94b0-e8b439d74e31"
+                  name="X509CertPathStatusInformation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="301f3427-3fda-4c03-a168-164d957f90f2"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="2f9abb5e-8690-4067-97f8-643f27c79bde"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d5b1427a-a740-4d13-be35-91dcc9cd12c7"
+            name="status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Значение статуса.</description>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="fb3a539c-48d4-4144-ab35-3fdb70cbdb22"
+                LastKnownName="X509CertPathStatusFlag"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2d20c446-0bda-4c8b-a0d7-48a4464f247a"
+            name="information"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Коллекция сообщений статуса.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="f738b547-04b2-4576-82e5-ab4504e0fe4a"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="a5b10cb3-f098-44b8-9cba-23e417e0fc95"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="d661d459-8a42-415b-8ba3-37339bbf9675"
+                LastKnownName="X509CertPathStatusInformation"
+                LastKnownLocation="Package_1015.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="fb3a539c-48d4-4144-ab35-3fdb70cbdb22"
+        name="X509CertPathStatusFlag"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Перечисление статусов для цепочки и элементов цепочки.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="6d996055-8c60-415b-ab5f-c651dfe302f7"
+            name="noError">
+            <description>Нет ошибок</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="9b7805f8-6d7f-4f40-807b-d240c00e373f"
+            name="cyclic">
+            <description>Замкнутая цепочка</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="4de1f2d9-88f0-4736-90df-baa3dc976287"
+            name="CTL" />
+          <enumerationLiteral
+            Id="bf01b44e-4a99-4942-aa9e-933604009933"
+            name="CRL" />
+          <enumerationLiteral
+            Id="cc8b153e-f5dd-495a-a585-a9665742ade7"
+            name="partialChain">
+            <description>Не законченная цепочка</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="076135d8-94e6-40f3-9619-708075c8329b"
+            name="revoked">
+            <description>Отозванный сертификат</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="9092f49a-11f9-4955-9e6d-12b43c0a668d"
+            name="untrustedRoot">
+            <description>Нет доверия к корневому сертификату</description>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d661d459-8a42-415b-8ba3-37339bbf9675"
+        name="X509CertPathStatusInformation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет детализированную информацию о статусе.</description>
+        <ownedAttributesInternal>
+          <property
+            Id="1eef346c-7ee5-4571-a4dd-a56584c2a101"
+            name="code"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Код сообщения.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="9d67c7b9-6305-4c91-851f-e7a0fff8749a"
+            name="message"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Текст сообщения.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6e411c3f-56f3-4d2a-84c0-2846d75cc7bd"
+        name="trustedJS::crypto::X509IssuerAlternativeName{readOnly}" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="bfcc7e51-7e2c-4284-9a80-19ec454fa659"
+        name="X509CertPathVerificationFlags"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Перечисление определяет какие проверки необходимо провести у элементов цепочки.</description>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d05ca50-a41a-4f4a-8e8a-f3702ffe1cb8" name="Default" comment="" />
+    <ignored path="trustedCryptoPHP.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="trustedCryptoPHP" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="BigInteger.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PKI/BigInteger.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="174" column="3" selection-start="5472" selection-end="5472" vertical-scroll-proportion="0.0" vertical-offset="2958" max-vertical-offset="63818">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ASN1.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PKI/ASN1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="247" column="19" selection-start="7381" selection-end="7381" vertical-scroll-proportion="0.0" vertical-offset="4199" max-vertical-offset="22984">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X509.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PKI/X509.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="64" column="3" selection-start="2708" selection-end="2708" vertical-scroll-proportion="-6.868304" vertical-offset="6528" max-vertical-offset="13889">
+              <folding>
+                <element signature="e#2304#2332#0" expanded="false" />
+                <element signature="e#6592#6682#0" expanded="false" />
+                <element signature="e#6708#6796#0" expanded="false" />
+                <element signature="e#6820#6901#0" expanded="false" />
+                <element signature="e#6930#7208#0" expanded="false" />
+                <element signature="e#7245#7321#0" expanded="false" />
+                <element signature="e#7352#7435#0" expanded="false" />
+                <element signature="e#7461#7587#0" expanded="false" />
+                <element signature="n#X509Certificate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#8846#9230#0" expanded="false" />
+                <element signature="e#10423#10718#0" expanded="false" />
+                <element signature="e#57647#57890#0" expanded="false" />
+                <element signature="n#loadX509#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#59748#59911#0" expanded="false" />
+                <element signature="n#saveX509#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#62753#62972#0" expanded="false" />
+                <element signature="n#_mapInExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#64993#65212#0" expanded="false" />
+                <element signature="n#_mapOutExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#67870#68085#0" expanded="false" />
+                <element signature="n#_mapInAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#69500#69715#0" expanded="false" />
+                <element signature="n#_mapOutAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#71176#71324#0" expanded="false" />
+                <element signature="n#_getMapping#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#75038#75207#0" expanded="false" />
+                <element signature="n#loadCA#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#75687#75963#0" expanded="false" />
+                <element signature="e#75972#76024#0" expanded="false" />
+                <element signature="e#76140#76710#0" expanded="false" />
+                <element signature="e#76719#76787#0" expanded="false" />
+                <element signature="e#77071#77764#0" expanded="false" />
+                <element signature="n#validateURL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#79963#80158#0" expanded="false" />
+                <element signature="n#validateDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#80970#81529#0" expanded="false" />
+                <element signature="n#validateSignature#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#81702#81999#0" expanded="false" />
+                <element signature="e#87284#87670#0" expanded="false" />
+                <element signature="n#_validateSignature#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#89013#89281#0" expanded="false" />
+                <element signature="n#_reformatKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#90080#90286#0" expanded="false" />
+                <element signature="n#_decodeIP#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#90430#90635#0" expanded="false" />
+                <element signature="n#_encodeIP#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#90731#90870#0" expanded="false" />
+                <element signature="n#_translateDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#93735#93949#0" expanded="false" />
+                <element signature="n#setDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#94600#94734#0" expanded="false" />
+                <element signature="n#removeDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#95203#95412#0" expanded="false" />
+                <element signature="n#getDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#96717#96923#0" expanded="false" />
+                <element signature="n#setDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#98055#98245#0" expanded="false" />
+                <element signature="n#getDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#98478#101675#0" expanded="false" />
+                <element signature="e#101961#103035#0" expanded="false" />
+                <element signature="e#103164#103591#0" expanded="false" />
+                <element signature="e#103851#104011#0" expanded="false" />
+                <element signature="n#getIssuerDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#104549#104743#0" expanded="false" />
+                <element signature="n#getSubjectDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#105392#105594#0" expanded="false" />
+                <element signature="n#getIssuerDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#106164#106366#0" expanded="false" />
+                <element signature="n#getSubjectDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#107070#107176#0" expanded="false" />
+                <element signature="n#getChain#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#107454#108503#0" expanded="false" />
+                <element signature="e#108685#108877#0" expanded="false" />
+                <element signature="n#setPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#108985#109176#0" expanded="false" />
+                <element signature="n#setPrivateKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#109256#109452#0" expanded="false" />
+                <element signature="n#setChallenge#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#109542#109687#0" expanded="false" />
+                <element signature="n#getPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="e#110754#110901#0" expanded="false" />
+                <element signature="n#loadCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#saveCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#loadSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#saveSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#loadCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#saveCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_timeField#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#sign#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#signCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#signSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#signCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_sign#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setStartDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setEndDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setSerialNumber#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#makeCA#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_subArray#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_extensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_removeExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_getExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_getExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_setExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#removeExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#getExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#getExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#removeAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#getAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#getAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setKeyIdentifier#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#computeKeyIdentifier#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_formatSubjectPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setDomain#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setIPAddress#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_dnsName#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_iPAddress#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_revokedCertificate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#revoke#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#unrevoke#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#getRevoked#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#listRevoked#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#removeRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#getRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#getRevokedCertificateExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#setRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+                <element signature="n#_extractBER#0;n#X509Certificate#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RSA.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PKI/RSA.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="24" selection-start="2700" selection-end="2700" vertical-scroll-proportion="0.0" vertical-offset="1309" max-vertical-offset="50932">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Random.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PKI/Random.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="22" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="5202">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Hash.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PKI/Hash.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="3" selection-start="2402" selection-end="2402" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="14399">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Serji" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/PKI/BigInteger.php" />
+        <option value="$PROJECT_DIR$/PKI/ASN1.php" />
+        <option value="$PROJECT_DIR$/PKI/X509.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trustedCryptoPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trustedCryptoPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trustedCryptoPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trustedCryptoPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trustedCryptoPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PKI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="C:/Program Files/SmartGitHg/git/bin/git.exe" />
+    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d05ca50-a41a-4f4a-8e8a-f3702ffe1cb8" name="Default" comment="" />
+      <created>1415366221688</created>
+      <updated>1415366221688</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first&#10;">
+      <created>1415367922071</created>
+      <updated>1415367922071</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first&#10;">
+      <created>1415782866760</created>
+      <updated>1415782866760</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="first&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="first&#10;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/PKI/BigInteger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="3" selection-start="5472" selection-end="5472" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="63818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/ASN1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="247" column="19" selection-start="7381" selection-end="7381" vertical-scroll-proportion="0.0" vertical-offset="4199" max-vertical-offset="22984">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/X509.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4266" column="22" selection-start="161612" selection-end="161612" vertical-scroll-proportion="0.0" vertical-offset="13889" max-vertical-offset="13889">
+          <folding>
+            <element signature="e#2304#2332#0" expanded="false" />
+            <element signature="e#6592#6682#0" expanded="false" />
+            <element signature="e#6708#6796#0" expanded="false" />
+            <element signature="e#6820#6901#0" expanded="false" />
+            <element signature="e#6930#7208#0" expanded="false" />
+            <element signature="e#7245#7321#0" expanded="false" />
+            <element signature="e#7352#7435#0" expanded="false" />
+            <element signature="e#7461#7587#0" expanded="false" />
+            <element signature="n#X509Certificate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#8846#9230#0" expanded="false" />
+            <element signature="e#10423#10718#0" expanded="false" />
+            <element signature="e#57647#57890#0" expanded="false" />
+            <element signature="n#loadX509#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#59748#59911#0" expanded="false" />
+            <element signature="n#saveX509#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#62753#62972#0" expanded="false" />
+            <element signature="n#_mapInExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#64993#65212#0" expanded="false" />
+            <element signature="n#_mapOutExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#67870#68085#0" expanded="false" />
+            <element signature="n#_mapInAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#69500#69715#0" expanded="false" />
+            <element signature="n#_mapOutAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#71176#71324#0" expanded="false" />
+            <element signature="n#_getMapping#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#75038#75207#0" expanded="false" />
+            <element signature="n#loadCA#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#75687#75963#0" expanded="false" />
+            <element signature="e#75972#76024#0" expanded="false" />
+            <element signature="e#76140#76710#0" expanded="false" />
+            <element signature="e#76719#76787#0" expanded="false" />
+            <element signature="e#77071#77764#0" expanded="false" />
+            <element signature="n#validateURL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#79963#80158#0" expanded="false" />
+            <element signature="n#validateDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#80970#81529#0" expanded="false" />
+            <element signature="n#validateSignature#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#81702#81999#0" expanded="false" />
+            <element signature="e#87284#87670#0" expanded="false" />
+            <element signature="n#_validateSignature#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#89013#89281#0" expanded="false" />
+            <element signature="n#_reformatKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90080#90286#0" expanded="false" />
+            <element signature="n#_decodeIP#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90430#90635#0" expanded="false" />
+            <element signature="n#_encodeIP#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90731#90870#0" expanded="false" />
+            <element signature="n#_translateDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#93735#93949#0" expanded="false" />
+            <element signature="n#setDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#94600#94734#0" expanded="false" />
+            <element signature="n#removeDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#95203#95412#0" expanded="false" />
+            <element signature="n#getDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#96717#96923#0" expanded="false" />
+            <element signature="n#setDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#98055#98245#0" expanded="false" />
+            <element signature="n#getDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#98478#101675#0" expanded="false" />
+            <element signature="e#101961#103035#0" expanded="false" />
+            <element signature="e#103164#103591#0" expanded="false" />
+            <element signature="e#103851#104011#0" expanded="false" />
+            <element signature="n#getIssuerDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#104549#104743#0" expanded="false" />
+            <element signature="n#getSubjectDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#105392#105594#0" expanded="false" />
+            <element signature="n#getIssuerDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#106164#106366#0" expanded="false" />
+            <element signature="n#getSubjectDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#107070#107176#0" expanded="false" />
+            <element signature="n#getChain#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#107454#108503#0" expanded="false" />
+            <element signature="e#108685#108877#0" expanded="false" />
+            <element signature="n#setPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#108985#109176#0" expanded="false" />
+            <element signature="n#setPrivateKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#109256#109452#0" expanded="false" />
+            <element signature="n#setChallenge#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#109542#109687#0" expanded="false" />
+            <element signature="n#getPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#110754#110901#0" expanded="false" />
+            <element signature="n#loadCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#loadSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#loadCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_timeField#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#sign#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_sign#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setStartDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setEndDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setSerialNumber#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#makeCA#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_subArray#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_extensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_removeExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_getExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_getExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_setExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setKeyIdentifier#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#computeKeyIdentifier#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_formatSubjectPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setDomain#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setIPAddress#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_dnsName#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_iPAddress#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_revokedCertificate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#revoke#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#unrevoke#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevoked#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#listRevoked#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevokedCertificateExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_extractBER#0;n#X509Certificate#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/RSA.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="24" selection-start="2700" selection-end="2700" vertical-scroll-proportion="0.0" vertical-offset="1309" max-vertical-offset="50932">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/Random.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="22" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="5202">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/Hash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="3" selection-start="2402" selection-end="2402" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="14399">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/BigInteger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="30" selection-start="3499" selection-end="3499" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="62696">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/ASN1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="227" column="52" selection-start="6950" selection-end="6950" vertical-scroll-proportion="0.0" vertical-offset="3859" max-vertical-offset="22984">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/X509.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="413" column="10" selection-start="11302" selection-end="11302" vertical-scroll-proportion="0.0" vertical-offset="7021" max-vertical-offset="78013">
+          <folding>
+            <element signature="e#2304#2332#0" expanded="false" />
+            <element signature="e#6592#6682#0" expanded="false" />
+            <element signature="e#6708#6796#0" expanded="false" />
+            <element signature="e#6820#6901#0" expanded="false" />
+            <element signature="e#6930#7208#0" expanded="false" />
+            <element signature="e#7245#7321#0" expanded="false" />
+            <element signature="e#7352#7435#0" expanded="false" />
+            <element signature="e#7461#7587#0" expanded="false" />
+            <element signature="n#X509Certificate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#8846#9230#0" expanded="false" />
+            <element signature="e#10423#10718#0" expanded="false" />
+            <element signature="e#57647#57890#0" expanded="false" />
+            <element signature="n#loadX509#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#59748#59911#0" expanded="false" />
+            <element signature="n#saveX509#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#62753#62972#0" expanded="false" />
+            <element signature="n#_mapInExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#64993#65212#0" expanded="false" />
+            <element signature="n#_mapOutExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#67870#68085#0" expanded="false" />
+            <element signature="n#_mapInAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#69500#69715#0" expanded="false" />
+            <element signature="n#_mapOutAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#71176#71324#0" expanded="false" />
+            <element signature="n#_getMapping#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#75038#75207#0" expanded="false" />
+            <element signature="n#loadCA#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#75687#75963#0" expanded="false" />
+            <element signature="e#75972#76024#0" expanded="false" />
+            <element signature="e#76140#76710#0" expanded="false" />
+            <element signature="e#76719#76787#0" expanded="false" />
+            <element signature="e#77071#77764#0" expanded="false" />
+            <element signature="n#validateURL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#79963#80158#0" expanded="false" />
+            <element signature="n#validateDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#80970#81529#0" expanded="false" />
+            <element signature="n#validateSignature#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#81702#81999#0" expanded="false" />
+            <element signature="e#87284#87670#0" expanded="false" />
+            <element signature="n#_validateSignature#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#89013#89281#0" expanded="false" />
+            <element signature="n#_reformatKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90080#90286#0" expanded="false" />
+            <element signature="n#_decodeIP#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90430#90635#0" expanded="false" />
+            <element signature="n#_encodeIP#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90731#90870#0" expanded="false" />
+            <element signature="n#_translateDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#93735#93949#0" expanded="false" />
+            <element signature="n#setDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#94600#94734#0" expanded="false" />
+            <element signature="n#removeDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#95203#95412#0" expanded="false" />
+            <element signature="n#getDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#96717#96923#0" expanded="false" />
+            <element signature="n#setDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#98055#98245#0" expanded="false" />
+            <element signature="n#getDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#98478#101675#0" expanded="false" />
+            <element signature="e#101961#103035#0" expanded="false" />
+            <element signature="e#103164#103591#0" expanded="false" />
+            <element signature="e#103851#104011#0" expanded="false" />
+            <element signature="n#getIssuerDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#104549#104743#0" expanded="false" />
+            <element signature="n#getSubjectDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#105392#105594#0" expanded="false" />
+            <element signature="n#getIssuerDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#106164#106366#0" expanded="false" />
+            <element signature="n#getSubjectDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#107070#107176#0" expanded="false" />
+            <element signature="n#getChain#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#107454#108503#0" expanded="false" />
+            <element signature="e#108685#108877#0" expanded="false" />
+            <element signature="n#setPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#108985#109176#0" expanded="false" />
+            <element signature="n#setPrivateKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#109256#109452#0" expanded="false" />
+            <element signature="n#setChallenge#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#109542#109687#0" expanded="false" />
+            <element signature="n#getPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#110754#110901#0" expanded="false" />
+            <element signature="n#loadCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#loadSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#loadCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_timeField#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#sign#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_sign#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setStartDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setEndDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setSerialNumber#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#makeCA#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_subArray#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_extensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_removeExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_getExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_getExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_setExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setKeyIdentifier#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#computeKeyIdentifier#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_formatSubjectPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setDomain#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setIPAddress#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_dnsName#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_iPAddress#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_revokedCertificate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#revoke#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#unrevoke#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevoked#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#listRevoked#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevokedCertificateExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_extractBER#0;n#X509Certificate#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/BigInteger.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="174" column="3" selection-start="5472" selection-end="5472" vertical-scroll-proportion="0.0" vertical-offset="2958" max-vertical-offset="63818">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/ASN1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="247" column="19" selection-start="7381" selection-end="7381" vertical-scroll-proportion="0.0" vertical-offset="4199" max-vertical-offset="22984">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/RSA.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="24" selection-start="2700" selection-end="2700" vertical-scroll-proportion="0.0" vertical-offset="1309" max-vertical-offset="50932">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/Random.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="22" selection-start="2152" selection-end="2152" vertical-scroll-proportion="0.0" vertical-offset="884" max-vertical-offset="5202">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/Hash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="3" selection-start="2402" selection-end="2402" vertical-scroll-proportion="0.0" vertical-offset="1054" max-vertical-offset="14399">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PKI/X509.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="3" selection-start="2708" selection-end="2708" vertical-scroll-proportion="-6.868304" vertical-offset="6528" max-vertical-offset="13889">
+          <folding>
+            <element signature="e#2304#2332#0" expanded="false" />
+            <element signature="e#6592#6682#0" expanded="false" />
+            <element signature="e#6708#6796#0" expanded="false" />
+            <element signature="e#6820#6901#0" expanded="false" />
+            <element signature="e#6930#7208#0" expanded="false" />
+            <element signature="e#7245#7321#0" expanded="false" />
+            <element signature="e#7352#7435#0" expanded="false" />
+            <element signature="e#7461#7587#0" expanded="false" />
+            <element signature="n#X509Certificate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#8846#9230#0" expanded="false" />
+            <element signature="e#10423#10718#0" expanded="false" />
+            <element signature="e#57647#57890#0" expanded="false" />
+            <element signature="n#loadX509#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#59748#59911#0" expanded="false" />
+            <element signature="n#saveX509#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#62753#62972#0" expanded="false" />
+            <element signature="n#_mapInExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#64993#65212#0" expanded="false" />
+            <element signature="n#_mapOutExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#67870#68085#0" expanded="false" />
+            <element signature="n#_mapInAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#69500#69715#0" expanded="false" />
+            <element signature="n#_mapOutAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#71176#71324#0" expanded="false" />
+            <element signature="n#_getMapping#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#75038#75207#0" expanded="false" />
+            <element signature="n#loadCA#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#75687#75963#0" expanded="false" />
+            <element signature="e#75972#76024#0" expanded="false" />
+            <element signature="e#76140#76710#0" expanded="false" />
+            <element signature="e#76719#76787#0" expanded="false" />
+            <element signature="e#77071#77764#0" expanded="false" />
+            <element signature="n#validateURL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#79963#80158#0" expanded="false" />
+            <element signature="n#validateDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#80970#81529#0" expanded="false" />
+            <element signature="n#validateSignature#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#81702#81999#0" expanded="false" />
+            <element signature="e#87284#87670#0" expanded="false" />
+            <element signature="n#_validateSignature#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#89013#89281#0" expanded="false" />
+            <element signature="n#_reformatKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90080#90286#0" expanded="false" />
+            <element signature="n#_decodeIP#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90430#90635#0" expanded="false" />
+            <element signature="n#_encodeIP#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#90731#90870#0" expanded="false" />
+            <element signature="n#_translateDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#93735#93949#0" expanded="false" />
+            <element signature="n#setDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#94600#94734#0" expanded="false" />
+            <element signature="n#removeDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#95203#95412#0" expanded="false" />
+            <element signature="n#getDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#96717#96923#0" expanded="false" />
+            <element signature="n#setDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#98055#98245#0" expanded="false" />
+            <element signature="n#getDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#98478#101675#0" expanded="false" />
+            <element signature="e#101961#103035#0" expanded="false" />
+            <element signature="e#103164#103591#0" expanded="false" />
+            <element signature="e#103851#104011#0" expanded="false" />
+            <element signature="n#getIssuerDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#104549#104743#0" expanded="false" />
+            <element signature="n#getSubjectDN#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#105392#105594#0" expanded="false" />
+            <element signature="n#getIssuerDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#106164#106366#0" expanded="false" />
+            <element signature="n#getSubjectDNProp#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#107070#107176#0" expanded="false" />
+            <element signature="n#getChain#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#107454#108503#0" expanded="false" />
+            <element signature="e#108685#108877#0" expanded="false" />
+            <element signature="n#setPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#108985#109176#0" expanded="false" />
+            <element signature="n#setPrivateKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#109256#109452#0" expanded="false" />
+            <element signature="n#setChallenge#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#109542#109687#0" expanded="false" />
+            <element signature="n#getPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="e#110754#110901#0" expanded="false" />
+            <element signature="n#loadCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#loadSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#loadCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#saveCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_timeField#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#sign#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signCSR#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signSPKAC#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#signCRL#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_sign#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setStartDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setEndDate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setSerialNumber#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#makeCA#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_subArray#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_extensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_removeExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_getExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_getExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_setExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getAttributes#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setAttribute#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setKeyIdentifier#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#computeKeyIdentifier#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_formatSubjectPublicKey#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setDomain#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setIPAddress#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_dnsName#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_iPAddress#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_revokedCertificate#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#revoke#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#unrevoke#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevoked#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#listRevoked#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#removeRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#getRevokedCertificateExtensions#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#setRevokedCertificateExtension#0;n#X509Certificate#0;n#!!top" expanded="false" />
+            <element signature="n#_extractBER#0;n#X509Certificate#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

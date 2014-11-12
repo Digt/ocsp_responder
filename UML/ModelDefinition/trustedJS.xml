@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="js.xsl"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="f8b27276-02be-4935-a866-1d221bdeb036"
+  name="trustedJS">
+  <ownedCommentsInternal>
+    <comment
+      Id="df3973da-1716-4355-92eb-66d8860e678f">
+      <body>Добавлено свойство trustedStore, определяющее список доверенных сертификатов</body>
+      <annotatedElements>
+        <classMoniker
+          Id="891d905b-8947-4b92-a5ff-793022d5bdb4"
+          LastKnownName="x509ChainPolicy"
+          LastKnownLocation="x509.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c36cb94f-3810-4df5-be29-6da0d256b5ea"
+        LastKnownName="x509"
+        LastKnownLocation="x509.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5c549159-7df5-4867-a87e-1cac694e4ed8"
+        name="asnEncodedData"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет данные в кодировке ASN.1.</description>
+        <targetEnds>
+          <association
+            Id="e426bb32-86c3-407c-a281-71144a390582"
+            isDerived="false"
+            sourceEndRoleName="asnEncodedData"
+            targetEndRoleName="oid"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9c0234a9-3e2e-4944-90dd-915c0868704e"
+              LastKnownName="oid"
+              LastKnownLocation="trustedJS.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4d16994a-15f0-4759-984f-bf9c65253d65"
+                  name="asnEncodedData"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="88db05cc-d7af-47b7-ba56-25ccac456b74"
+                  name="oid"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="a7586580-8778-41d4-bcaf-5575e46cd150"
+            name="oid"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает или задает значение Oid для объекта AsnEncodedData.</description>
+            <type_NamedElement>
+              <classMoniker
+                Id="9c0234a9-3e2e-4944-90dd-915c0868704e"
+                LastKnownName="oid"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="0c122a93-9190-4a6c-8f39-c7da204f1c67"
+            name="rowData"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает или задает данные в кодировке ASN.1, представленные в массиве байтов.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c1702b4b-9147-4204-a54a-f193810fd453"
+                LastKnownName="Object"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9e1e28c4-9f6e-40b9-8a18-9ac378e37a7c"
+            name="format"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Возвращает форматированную версию данных в кодировке ASN.1 в виде строки.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ea28e6dd-7a18-4729-9f9d-25a72d431197"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="729b468f-5f77-4cfa-bff9-ccdcf29a6b53"
+                  name="multiLine"
+                  direction="In">
+                  <description>Значение true, если возвращаемая строка должна содержать возвраты каретки; в противном случае — false.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9c0234a9-3e2e-4944-90dd-915c0868704e"
+        name="oid"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="d56d00ea-d858-4433-98e3-f3d9b2544f06"
+            name="friendlyName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает или задает понятное имя идентификатора.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d70444a3-bfad-482e-aca7-0c30a63c619a"
+            name="value"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает или задает номер идентификатора в формате с разделением точками.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="aefcdb53-bcad-4e92-aa3d-5f7149edc68e"
+        name="cryptographicAttributeObject"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Содержит тип и коллекцию значений, связанных с этим типом.</description>
+        <ownedAttributesInternal>
+          <property
+            Id="b6b7bd09-9828-4af0-93f0-4b856118d073"
+            name="oid"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает объект Oid, задающий идентификатор объекта для атрибута.</description>
+            <type_NamedElement>
+              <classMoniker
+                Id="9c0234a9-3e2e-4944-90dd-915c0868704e"
+                LastKnownName="oid"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="622f6b25-3145-4674-97d0-4d9436e90612"
+            name="value"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает коллекцию AsnEncodedDataCollection, в которой содержится множество значений, связанных с атрибутом.</description>
+            <type_NamedElement>
+              <classMoniker
+                Id="5c549159-7df5-4867-a87e-1cac694e4ed8"
+                LastKnownName="asnEncodedData"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

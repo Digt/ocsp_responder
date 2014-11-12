@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="docs.xsl"?>
+<package
+  dslVersion="1.0.0.0"
+  Id="c36cb94f-3810-4df5-be29-6da0d256b5ea"
+  name="x509">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="d496b024-9be7-4ec2-ae40-5b1da0964bdd"
+        name="x509Certificate"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Представляет сертификат X.509.</description>
+        <ownedAttributesInternal>
+          <property
+            Id="e4e3453d-85c2-4a89-a591-5291ccb29460"
+            name="extensions"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает коллекцию объектов X509Extension.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="1709a23f-e50e-4ce7-9130-46cd899d968e"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="59d5f336-26f0-473d-8a7e-d85226a76587"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="cb656623-0453-4d09-aa81-ce4ae216be3b"
+                LastKnownName="x509Extension"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ce428acc-ee3b-433b-9147-460cd1548404"
+            name="subjectName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает различающееся имя субъекта от сертификата.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a8ad50b7-4a46-4b33-9f3b-883d45038704"
+            name="issuerName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает различающееся имя поставщика сертификата.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3a6207ad-08c5-4daa-86e2-52b1bfc765a1"
+            name="serialNumber"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает серийный номер сертификата.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="70dda4fe-87aa-4315-9572-4a2adf38967e"
+            name="friendlyName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает или задает связанный псевдоним для сертификата.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ad5a6e44-50b4-4e49-8033-65860220b637"
+            name="notBefore"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает дату в формате местного времени, после которой сертификат становится действительным.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="60a81090-202a-4b69-816f-7def5b398ad9"
+                LastKnownName="Date"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="17995b76-05b6-4d28-8f6e-24291cc3d625"
+            name="notAfter"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает дату в формате местного времени, после которой сертификат недействителен.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="60a81090-202a-4b69-816f-7def5b398ad9"
+                LastKnownName="Date"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="843cbc60-2211-4244-8fed-6cfcd2fc0099"
+            name="privateKey"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="a88e5b89-122a-410f-80ce-bcead897ad8c"
+            name="publicKey"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="cb29b48c-309b-4bf7-90f9-a86c823c55f5"
+            name="rowData"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает необработанные данные сертификата.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="c1702b4b-9147-4204-a54a-f193810fd453"
+                LastKnownName="Object"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b2371d41-85d8-4959-9622-62fa54f07a9b"
+            name="thumbprint"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает отпечаток сертификата.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="d6d5d84f-af50-4f7c-8c80-b1c4b5c6d318"
+            name="signatureAlgorithm"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает алгоритм, используемый для создания подписи сертификата.</description>
+            <type_NamedElement>
+              <classMoniker
+                Id="9c0234a9-3e2e-4944-90dd-915c0868704e"
+                LastKnownName="oid"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="df850751-3f7c-4a4b-adcf-a47946fb35b7"
+            name="hasPrivateKey"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Возвращает значение, которое указывает, содержит ли объект X509Certificate2 закрытый ключ.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6052b596-a2ee-4e1d-be79-a6083d81b836"
+            name="version"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает версию формата сертификата X.509.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fd9c2110-efd3-43ea-9842-cd12104d7e41"
+                LastKnownName="Number"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="b8804e93-3f3d-4b0b-90b7-57fa4040de48"
+            name="getNameInfo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Получает имена субъекта и поставщика сертификата.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="077acb80-757a-48e6-bc30-b048bbe7cf11"
+                  name="nameType"
+                  direction="In"
+                  isUnique="false">
+                  <description>Значение X509NameType для субъекта. </description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="57bdf92c-2454-44ff-a7d1-3c72d9231290"
+                  name="forIssuer"
+                  direction="In"
+                  isUnique="false">
+                  <description>Значение true для включения имени поставщика; в противном случае — false. </description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="51295f6b-59b0-4acc-9ce2-ab58ad07ac17"
+            name="import"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Заполняет объект x509Certificate данными из закодированной строки (BASE64).</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e6567ba3-941a-4c65-9a9d-affea5ca591d"
+                  name="encodedCertificate"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="8cddc28d-ceb1-47fd-8789-7841f445a014"
+            name="export"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Копирует сертификат в закодированную строку (BASE64). Закодированная строка может быть записана в файл или импортирована в новый объект x509certificate.</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9e5cced3-8c89-441e-b328-927008f42811"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="824d2af5-2ad9-45c5-99ca-6ed164518349"
+            name="load"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <description>Импрортирует сертификат из файла</description>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7fb6aa9c-5c29-4df8-8569-3c7347a0f56c"
+                  name="fileName"
+                  direction="In"
+                  isUnique="false">
+                  <description>Строка указывающая путь к  .cer или .pfx файлу, который хранит сертификат</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9203d363-5e30-4514-bdba-ea90ab130d85"
+                  name="password"
+                  direction="In"
+                  isUnique="false">
+                  <description>Строка содержащая пароль для файла с закрытым ключом. </description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f23cf902-ebea-4a6e-b88d-e272bb05596f"
+                  name="keyStorageFlag"
+                  direction="In"
+                  isUnique="false">
+                  <description>Значение которое определяет тип хранения ключа.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="859d4ed4-94ff-491f-9e6e-17c0efe342eb"
+                  name="keyLocation"
+                  direction="In"
+                  isUnique="false">
+                  <description>Значение определяющее местохранения ключа</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="7fccdc93-06c6-4824-a2c7-6db085d3378b"
+            name="save"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0f4165ac-585d-4969-93d7-e9d2ad2c9e29"
+                  name="fileName"
+                  direction="In"
+                  isUnique="false">
+                  <description>Строка которая содержит имя файла в который будет сохранен сертификат.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="dab5eeeb-2e92-4e6c-9525-fcf05361766c"
+                  name="password"
+                  direction="In"
+                  isUnique="false">
+                  <description>Строка содержащая пароль для файла с закрытым ключом. </description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b8826de1-a30b-4d4c-8b0a-aa5a3824061f"
+                  name="saveAs"
+                  direction="In"
+                  isUnique="false">
+                  <description>Значение которое определяет формат сохраняемого файла</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20b655c8-0922-492b-bc0d-cd9a8f97801e"
+                  name="includeOptions"
+                  direction="In"
+                  isUnique="false">
+                  <description>Значение которое определяет как много сертификатов цепочки включить в сохраняемый файл.</description>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cb656623-0453-4d09-aa81-ce4ae216be3b"
+        name="x509Extension"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="2c226885-f111-4ae9-8ded-3333cae8f872"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5c549159-7df5-4867-a87e-1cac694e4ed8"
+              LastKnownName="asnEncodedData"
+              LastKnownLocation="trustedJS.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="2c5f2062-c98a-4b9f-b578-ab6c355a3763"
+            isDerived="false"
+            sourceEndRoleName="x509Extension"
+            targetEndRoleName="x509Certificate"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d496b024-9be7-4ec2-ae40-5b1da0964bdd"
+              LastKnownName="x509Certificate"
+              LastKnownLocation="x509.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4b3e23a5-97ca-4e4e-a678-f5ec4120b614"
+                  name="x509Extension"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bd9c350c-f054-45d7-a7fc-95b67863a8f3"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4fb930ac-eb52-46e0-92e9-e5967f86f67b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="58e6809e-5df3-4726-95b3-eb48881b6704"
+                  name="x509Certificate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="8320f531-50f0-4ed8-9424-b95f37868b8b"
+            name="critical"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает или задает логическое значение, определяющее, является ли расширение критическим.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="06960d46-8297-42ec-917b-0b0848c3d351"
+        name="x509BasicConstraints"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Определяет ограничения, установленные для сертификата.</description>
+        <generalsInternal>
+          <generalization
+            Id="5e8d2000-5ea3-4df7-a9f6-5f32986d0295"
+            isSubstitutable="false">
+            <classMoniker
+              Id="cb656623-0453-4d09-aa81-ce4ae216be3b"
+              LastKnownName="x509Extension"
+              LastKnownLocation="x509.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="3369289a-d552-4325-bc51-ab26b186375f"
+            name="certificateAuthority"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>
+              Получает значение, показывающее, является ли сертификат сертификатом центра сертификации (ЦС).
+              Значение true, если сертификат является сертификатом центра сертификации; в противном случае — false.
+            </description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e488532f-e22c-465b-9a99-849703e6fe66"
+            name="hasPathLengthConstraint"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>
+              Получает значение, указывающее, имеются ли у сертификата ограничения количества допустимых уровней пути.
+              Значение true, если сертификат имеет ограничение по количеству допустимых уровней пути, в противном случае — false.
+            </description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a7e00200-3980-4060-bd4a-1a8b7771bb5c"
+            name="pathLengthConstraint"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает количество уровней, допустимых в пути к сертификату.</description>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="fd9c2110-efd3-43ea-9842-cd12104d7e41"
+                LastKnownName="Number"
+                LastKnownLocation="x509.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="f323a1dc-531f-4c78-9c4f-5453b247bea7"
+        name="x509KeyUsageFlags"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="17aeb661-4710-4fa7-8985-c211ebf9a60d"
+            name="crlSign">
+            <description>Ключ может использоваться для подписи списка отзыва сертификатов (CRL).</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="239d7d09-232b-47c8-9d12-90b6a18fff51"
+            name="dataEncipherment">
+            <description>Ключ может использоваться для шифрования данных.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="b06d6a2a-ec47-43c0-a936-d9cc5179aa4d"
+            name="decipherOnly">
+            <description>Ключ может использоваться только для расшифровки.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="691b6401-d739-42d3-9dee-f4cfcd073176"
+            name="digitalSignature">
+            <description>Ключ может использоваться в качестве цифровой подписи.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="9c240f15-cfdc-4ca2-b6fb-8d0e979c5140"
+            name="encipherOnly">
+            <description>Ключ может использоваться только для шифрования.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="7fc89a11-40ae-419d-8012-4db725c11afb"
+            name="keyAgreement">
+            <description>Ключ может использоваться для определения согласования ключа, например, ключ, созданный с использованием алгоритма согласования ключей Диффи-Хеллмана.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="896061b7-3a06-48e9-9083-5b12fa6672dc"
+            name="keyCertSign">
+            <description>Ключ может использоваться для подписи сертификатов.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="faa238f7-d957-4a38-83b6-8b3821e5afe8"
+            name="keyEncipherment">
+            <description>Ключ может использоваться для шифрования ключа.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="cd02d54d-dced-4ff1-8d1a-5a93877f4c60"
+            name="none">
+            <description>Отсутствуют параметры использования ключа.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="75069fc3-7ff0-4cf4-992c-045221684ccd"
+            name="nonRepudiation">
+            <description>Ключ может использоваться для проверки подлинности.</description>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1a4d1262-475f-4cb4-a2e6-a138fe1801a2"
+        name="x509EnhancedKeyUsageExtension"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Определяет коллекцию идентификаторов объекта (OID), которая указывает приложения, использующие ключ.</description>
+        <generalsInternal>
+          <generalization
+            Id="0c3209d6-ebb1-46bd-86ee-1d3271354ea6"
+            isSubstitutable="false">
+            <classMoniker
+              Id="cb656623-0453-4d09-aa81-ce4ae216be3b"
+              LastKnownName="x509Extension"
+              LastKnownLocation="x509.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="0c525aaf-28ec-4af7-a5b3-d8d6a4cf7b3b"
+            name="enchancedKeyUsages"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает коллекцию идентификаторов объекта (OID), которые указывают приложения, использующие ключ.</description>
+            <lowerValueInternal>
+              <literalString
+                Id="3e2f94d8-d6b6-4330-8fa5-13166ee0c2ec"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="852da003-8f5a-4586-87a4-7ab9804ef1df"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="9c0234a9-3e2e-4944-90dd-915c0868704e"
+                LastKnownName="oid"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3164fce0-f6b0-4ff8-b465-39c9084935c9"
+        name="x509KeyUsageExtension"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Определяет использование ключа, содержащегося в сертификате X.509.</description>
+        <generalsInternal>
+          <generalization
+            Id="0ea02582-09de-4324-add5-497d0b60e971"
+            isSubstitutable="false">
+            <classMoniker
+              Id="cb656623-0453-4d09-aa81-ce4ae216be3b"
+              LastKnownName="x509Extension"
+              LastKnownLocation="x509.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="eabaf740-87a0-4734-9fd9-658acf6fb880"
+            name="keyUsages"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает флаг использования ключа, связанный с сертификатом.</description>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f67ed1d4-f412-468b-937f-cc1b561f8bb2"
+        name="x509SubjectKeyIdentifierExtension"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <description>Определяет строку, указывающую идентификатор ключа субъекта (SKI) для сертификата.</description>
+        <generalsInternal>
+          <generalization
+            Id="97788143-1c0f-42de-8841-15d2401b0ae2"
+            isSubstitutable="false">
+            <classMoniker
+              Id="cb656623-0453-4d09-aa81-ce4ae216be3b"
+              LastKnownName="x509Extension"
+              LastKnownLocation="x509.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="72b1e279-81ec-4d33-8b78-0c331dc594d8"
+            name="subjectKeyIdentifier"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <description>Получает строку, представляющую идентификатор ключа субъекта (SKI) для сертификата.</description>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="trustedJS.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c1702b4b-9147-4204-a54a-f193810fd453"
+        name="Object" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fd9c2110-efd3-43ea-9842-cd12104d7e41"
+        name="Number" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="60a81090-202a-4b69-816f-7def5b398ad9"
+        name="Date" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="1db5773e-4327-487c-93ea-11ffb76dcf0f"
+        name="String;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="06058c47-19d6-4f49-9a48-7da45833dc4d"
+        name="x509NameType"
+        isAbstract="false"
+        isLeaf="false">
+        <description>Задает тип имени сертификата X509.</description>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="c6aa70fa-ed80-4787-90b1-377bdcc0d3ae"
+            name="dnsFromAlternativeName">
+            <description>DNS-имя, связанное с альтернативным именем субъекта или поставщика сертификата X509. Это значение эквивалентно значению DnsName.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="e19e43e2-1e86-4be5-87b2-a73e5030989c"
+            name="dnsName">
+            <description>DNS-имя, связанное с альтернативным именем субъекта или поставщика сертификата X509.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="fb10fb27-2cda-4dd3-9e0f-fb2ee1723872"
+            name="emailName">
+            <description>Адрес электронной почты субъекта или поставщика сертификата X509.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="c4886b7e-7640-43f0-bda4-e01f3bdef41e"
+            name="simpleName">
+            <description>Простое имя субъекта или поставщика сертификата X509.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="e86775a1-ff83-4aae-8bdf-0fce5cf52a22"
+            name="upnName">
+            <description>Имя участника-пользователя (UPN) субъекта или поставщика сертификата X509.</description>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="95ddd07b-8774-4dc8-ab4a-56a3086efb71"
+            name="urlName" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

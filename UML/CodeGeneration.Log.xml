@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Журнал создания кода/преобразования текста">
+  <MessageClass Name="Message" Label="Сообщение" Option="Показывать информационные сообщения" />
+  <MessageClass Name="Warning" Label="Предупреждение" Option="Показывать предупреждения" />
+  <MessageClass Name="Error" Label="Ошибка" Option="Показывать ошибки" />
+  <MessageClass Name="Property" Label="Свойство" Option="Показывать метаданные" />
+  <MessageClass Name="Diagnostic" Label="Сообщение" Option="Показывать диагностические сообщения" />
+  <Message Timestamp="2014-07-09T16:07:11" Importance="High" Text="Запущено создание кода или преобразование текста." />
+  <Error Timestamp="2014-07-09T16:07:11" Importance="High" Text="Не найдены шаблоны для обработки.  Настройте шаблоны, нажав кнопку &quot;Настроить параметры создания кода по умолчанию...&quot; в меню &quot;Архитектура&quot;, или измените набор выбранных объектов, для которых запускается создание кода." />
+  <Message Timestamp="2014-07-09T16:07:11" Importance="Diagnostic" Text="Выбрано 8 элементов, не связанных с шаблоном." />
+  <Warning Timestamp="2014-07-09T16:07:11" Importance="Medium" Text="&quot;trustedJS::crypto::IXml&quot; -  (Interface): нет привязанных шаблонов." />
+  <Message Timestamp="2014-07-09T16:07:11" Importance="Diagnostic" Text="&quot;trustedJS::crypto::&quot; -  (Dependency): нет привязанных шаблонов." />
+  <Warning Timestamp="2014-07-09T16:07:11" Importance="Medium" Text="&quot;trustedJS::crypto::Certificate&quot; -  (Class): нет привязанных шаблонов." />
+  <Message Timestamp="2014-07-09T16:07:11" Importance="Diagnostic" Text="&quot;d2d5982c-5266-4467-946e-168e4f67470e&quot; -  (Generalization): нет привязанных шаблонов." />
+  <Warning Timestamp="2014-07-09T16:07:11" Importance="Medium" Text="&quot;trustedJS::crypto::OID&quot; -  (Class): нет привязанных шаблонов." />
+  <Warning Timestamp="2014-07-09T16:07:11" Importance="Medium" Text="&quot;trustedJS::crypto::X509Certificate&quot; -  (Class): нет привязанных шаблонов." />
+  <Message Timestamp="2014-07-09T16:07:11" Importance="Diagnostic" Text="&quot;trustedJS::crypto::&quot; -  (Association): нет привязанных шаблонов." />
+  <Warning Timestamp="2014-07-09T16:07:11" Importance="Medium" Text="&quot;trustedJS::crypto::Algorithm&quot; -  (Class): нет привязанных шаблонов." />
+  <Message Timestamp="2014-07-09T16:07:11" Importance="High" Text="Создание кода завершено. Ошибок: 1. Предупреждений: 5." />
+</Log>
