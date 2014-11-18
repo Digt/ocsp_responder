@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page X509.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/X509.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|							<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+										</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pure-PHP X.509 Parser</p>
+<p class="description"><p>PHP versions 4 and 5</p><p>Encode and decode X.509 certificates.</p><p>The extensions are from <a href="http://tools.ietf.org/html/rfc5280">RFC5280</a> and .</p><p>Note that loading an X.509 certificate and resaving it may invalidate the signature.  The reason being that the signature is based on a portion of the certificate that contains optional parameters with default values.  ie. if the parameter isn't there the default value is used.  Problem is, if the parameter is there and it just so happens to have the default value there are two ways that that parameter can be encoded.  It can be encoded explicitly or left out all together.  This would effect the signature value and thus may invalidate the the certificate all together unless the certificate is re-signed.</p><p>LICENSE: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p><p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p><p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Jim Wigginton &lt;<a href="mailto:terrafrost@php.net">terrafrost@php.net</a>&gt;</li>
+				<li><span class="field">copyright:</span> MMXII Jim Wigginton</li>
+				<li><span class="field">link:</span> <a href="http://phpseclib.sourceforge.net">http://phpseclib.sourceforge.net</a></li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/mit-license.html">MIT License</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|							<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+															</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../X509Certificate/X509Certificate.html">X509Certificate</a>
+					</td>
+					<td>
+											Pure-PHP X.509 Parser
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+															</div>
+		<div class="info-box-body">	
+			<a name="_ASN1_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../ASN1/_ASN1.php.html">"ASN1.php"</a></span>)
+			(line <span class="line-number">48</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Include File_ASN1</p>
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+											</div>
+		<div class="info-box-body">	
+			<a name="defineX509Certificate_ATTR_ALL"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_ATTR_ALL</span> = -1
+			(line <span class="line-number">118</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Attribute value disposition.</p>
+<p class="description"><p>If disposition is &gt;= 0, this is the index of the target value.</p></p>
+	
+		
+</div>
+<a name="defineX509Certificate_ATTR_APPEND"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_ATTR_APPEND</span> = -2
+			(line <span class="line-number">119</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineX509Certificate_ATTR_REPLACE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_ATTR_REPLACE</span> = -3
+			(line <span class="line-number">120</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+		
+</div>
+<a name="defineX509Certificate_DN_ARRAY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_DN_ARRAY</span> = 0
+			(line <span class="line-number">67</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return internal array representation</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodgetDN">X509Certificate::getDN()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_DN_ASN1"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_DN_ASN1</span> = 2
+			(line <span class="line-number">75</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return ASN.1 name string</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodgetDN">X509Certificate::getDN()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_DN_CANON"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_DN_CANON</span> = 4
+			(line <span class="line-number">83</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return canonical ASN.1 RDNs string</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodgetDN">X509Certificate::getDN()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_DN_HASH"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_DN_HASH</span> = 5
+			(line <span class="line-number">87</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return name hash for file indexing</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodgetDN">X509Certificate::getDN()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_DN_OPENSSL"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_DN_OPENSSL</span> = 3
+			(line <span class="line-number">79</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return OpenSSL compatible array</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodgetDN">X509Certificate::getDN()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_DN_STRING"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_DN_STRING</span> = 1
+			(line <span class="line-number">71</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return string</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodgetDN">X509Certificate::getDN()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_FORMAT_DER"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_FORMAT_DER</span> = 1
+			(line <span class="line-number">105</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save as DER</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> X509Certificate::saveX509()
+ @</li>
+				<li><span class="field">see:</span> X509Certificate::saveCSR()
+ @</li>
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodsaveCRL">X509Certificate::saveCRL()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_FORMAT_PEM"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_FORMAT_PEM</span> = 0
+			(line <span class="line-number">101</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save as PEM</p>
+<p class="description"><p>ie. a base64-encoded PEM with a header and a footer</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> X509Certificate::saveX509()
+ @</li>
+				<li><span class="field">see:</span> X509Certificate::saveCSR()
+ @</li>
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodsaveCRL">X509Certificate::saveCRL()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_FORMAT_SPKAC"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_FORMAT_SPKAC</span> = 2
+			(line <span class="line-number">111</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Save as a SPKAC</p>
+<p class="description"><p>Only works on CSRs. Not currently supported.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> X509Certificate::saveX509()
+ @</li>
+				<li><span class="field">see:</span> X509Certificate::saveCSR()
+ @</li>
+				<li><span class="field">see:</span> <a href="../X509Certificate/X509Certificate.html#methodsaveCRL">X509Certificate::saveCRL()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineX509Certificate_VALIDATE_SIGNATURE_BY_CA"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">X509Certificate_VALIDATE_SIGNATURE_BY_CA</span> = 1
+			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Flag to only accept signatures signed by certificate authorities</p>
+<p class="description"><p>Not really used anymore but retained all the same to suppress E_NOTICEs from old installs</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 18 Nov 2014 16:45:25 +0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

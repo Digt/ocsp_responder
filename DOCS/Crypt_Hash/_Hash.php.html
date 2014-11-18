@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page Hash.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/Hash.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+														</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pure-PHP implementations of keyed-hash message authentication codes (HMACs) and various cryptographic hashing functions.</p>
+<p class="description"><p>Uses hash() or mhash() if available and an internal implementation, otherwise.  Currently supports the following:</p><p>md2, md5, md5-96, sha1, sha1-96, sha256, sha256-96, sha384, and sha512, sha512-96</p><p>If <a href="../Crypt_Hash/Crypt_Hash.html#methodsetKey">setKey()</a> is called, <a href="../Crypt_Hash/Crypt_Hash.html#methodhash">hash()</a> will return the HMAC as opposed to the hash.  If no valid algorithm is provided, sha1 will be used.</p><p>PHP versions 4 and 5</p><p>The variable names are the same as those in  * {@link http://tools.ietf.org/html/rfc2104#section-2 RFC2104.}}</p><p>Here's a short example of how to use this library: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Crypt/Hash.php';
+
+&nbsp;&nbsp;&nbsp;$hash&nbsp;=&nbsp;new&nbsp;Crypt_Hash('sha1');
+
+&nbsp;&nbsp;&nbsp;$hash-&gt;setKey('abcdefg');
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;base64_encode($hash-&gt;hash('abcdefg'));
+?&gt;</ol></div></p><p>LICENSE: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p><p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p><p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Jim Wigginton &lt;<a href="mailto:terrafrost@php.net">terrafrost@php.net</a>&gt;</li>
+				<li><span class="field">copyright:</span> MMVII Jim Wigginton</li>
+				<li><span class="field">link:</span> <a href="http://phpseclib.sourceforge.net">http://phpseclib.sourceforge.net</a></li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/mit-license.html">MIT License</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+																	</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../Crypt_Hash/Crypt_Hash.html">Crypt_Hash</a>
+					</td>
+					<td>
+											Pure-PHP implementations of keyed-hash message authentication codes (HMACs) and various cryptographic hashing functions.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 18 Nov 2014 16:45:25 +0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

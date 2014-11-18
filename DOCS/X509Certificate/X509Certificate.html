@@ -1,0 +1,2090 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class X509Certificate</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class X509Certificate</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pure-PHP X.509 Parser</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Jim Wigginton &lt;<a href="mailto:terrafrost@php.net">terrafrost@php.net</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_X509.php.html">/X509.php</a> (line <span class="field">129</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>
+										<a href="#X509Certificate" title="details" class="method-name">X509Certificate</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#computeKeyIdentifier" title="details" class="method-name">computeKeyIdentifier</a>
+											([<span class="var-type">Mixed</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">null</span>], [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">1</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getAttribute" title="details" class="method-name">getAttribute</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$disposition</span> = <span class="var-default">X509Certificate_ATTR_ALL</span>], [<span class="var-type">Array</span>&nbsp;<span class="var-name">$csr</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#getAttributes" title="details" class="method-name">getAttributes</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$csr</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getChain" title="details" class="method-name">getChain</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#getDN" title="details" class="method-name">getDN</a>
+											([<span class="var-type">Mixed</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_DN_ARRAY</span>], [<span class="var-type">Array</span>&nbsp;<span class="var-name">$dn</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getDNProp" title="details" class="method-name">getDNProp</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>, [<span class="var-type">Array</span>&nbsp;<span class="var-name">$dn</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$withType</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getExtension" title="details" class="method-name">getExtension</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">Array</span>&nbsp;<span class="var-name">$cert</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#getExtensions" title="details" class="method-name">getExtensions</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$cert</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getIssuerDN" title="details" class="method-name">getIssuerDN</a>
+											([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_DN_ARRAY</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getIssuerDNProp" title="details" class="method-name">getIssuerDNProp</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$withType</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getPublicKey" title="details" class="method-name">getPublicKey</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getRevoked" title="details" class="method-name">getRevoked</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getRevokedCertificateExtension" title="details" class="method-name">getRevokedCertificateExtension</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">Array</span>&nbsp;<span class="var-name">$crl</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#getRevokedCertificateExtensions" title="details" class="method-name">getRevokedCertificateExtensions</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$crl</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getSubjectDN" title="details" class="method-name">getSubjectDN</a>
+											([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_DN_ARRAY</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#getSubjectDNProp" title="details" class="method-name">getSubjectDNProp</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$withType</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#listRevoked" title="details" class="method-name">listRevoked</a>
+											([<span class="var-type">array</span>&nbsp;<span class="var-name">$crl</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#loadCA" title="details" class="method-name">loadCA</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$cert</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#loadCRL" title="details" class="method-name">loadCRL</a>
+											(<span class="var-type">Array</span>&nbsp;<span class="var-name">$crl</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#loadCSR" title="details" class="method-name">loadCSR</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$csr</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#loadSPKAC" title="details" class="method-name">loadSPKAC</a>
+											(<span class="var-type">Array</span>&nbsp;<span class="var-name">$spkac</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#loadX509" title="details" class="method-name">loadX509</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$cert</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#makeCA" title="details" class="method-name">makeCA</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#removeAttribute" title="details" class="method-name">removeAttribute</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$disposition</span> = <span class="var-default">X509Certificate_ATTR_ALL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#removeDNProp" title="details" class="method-name">removeDNProp</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#removeExtension" title="details" class="method-name">removeExtension</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#removeRevokedCertificateExtension" title="details" class="method-name">removeRevokedCertificateExtension</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#revoke" title="details" class="method-name">revoke</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#saveCRL" title="details" class="method-name">saveCRL</a>
+											(<span class="var-type">Array</span>&nbsp;<span class="var-name">$crl</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_FORMAT_PEM</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#saveCSR" title="details" class="method-name">saveCSR</a>
+											(<span class="var-type">Array</span>&nbsp;<span class="var-name">$csr</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_FORMAT_PEM</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#saveSPKAC" title="details" class="method-name">saveSPKAC</a>
+											(<span class="var-type">Array</span>&nbsp;<span class="var-name">$spkac</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_FORMAT_PEM</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#saveX509" title="details" class="method-name">saveX509</a>
+											(<span class="var-type">Array</span>&nbsp;<span class="var-name">$cert</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_FORMAT_PEM</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setAttribute" title="details" class="method-name">setAttribute</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$disposition</span> = <span class="var-default">X509Certificate_ATTR_ALL</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setChallenge" title="details" class="method-name">setChallenge</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$challenge</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setDN" title="details" class="method-name">setDN</a>
+											(<span class="var-type">Mixed</span>&nbsp;<span class="var-name">$dn</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$merge</span> = <span class="var-default">false</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'utf8String'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setDNProp" title="details" class="method-name">setDNProp</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$propValue</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'utf8String'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#setDomain" title="details" class="method-name">setDomain</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setEndDate" title="details" class="method-name">setEndDate</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$date</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setExtension" title="details" class="method-name">setExtension</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$critical</span> = <span class="var-default">false</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setIPAddress" title="details" class="method-name">setIPAddress</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$ipAddress</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setKeyIdentifier" title="details" class="method-name">setKeyIdentifier</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setPrivateKey" title="details" class="method-name">setPrivateKey</a>
+											(<span class="var-type">Object</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setPublicKey" title="details" class="method-name">setPublicKey</a>
+											(<span class="var-type">Object</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setRevokedCertificateExtension" title="details" class="method-name">setRevokedCertificateExtension</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$critical</span> = <span class="var-default">false</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setSerialNumber" title="details" class="method-name">setSerialNumber</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, [<span class="var-type">$base</span>&nbsp;<span class="var-name">$base</span> = <span class="var-default">-256</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setStartDate" title="details" class="method-name">setStartDate</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$date</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#sign" title="details" class="method-name">sign</a>
+											(<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$issuer</span>, <span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$subject</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$signatureAlgorithm</span> = <span class="var-default">'sha1WithRSAEncryption'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#signCRL" title="details" class="method-name">signCRL</a>
+											(<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$issuer</span>, <span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$crl</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$signatureAlgorithm</span> = <span class="var-default">'sha1WithRSAEncryption'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#signCSR" title="details" class="method-name">signCSR</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$signatureAlgorithm</span> = <span class="var-default">'sha1WithRSAEncryption'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#signSPKAC" title="details" class="method-name">signSPKAC</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$signatureAlgorithm</span> = <span class="var-default">'sha1WithRSAEncryption'</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#unrevoke" title="details" class="method-name">unrevoke</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#validateDate" title="details" class="method-name">validateDate</a>
+											([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#validateSignature" title="details" class="method-name">validateSignature</a>
+											([<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$caonly</span> = <span class="var-default">true</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#validateURL" title="details" class="method-name">validateURL</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#_sign" title="details" class="method-name">_sign</a>
+											(<span class="var-type">Object</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$signatureAlgorithm</span>, <span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$subject</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodX509Certificate" id="X509Certificate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor X509Certificate</span> (line <span class="line-number">312</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Стандартный конструктор класса X509Certificate.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>
+		<span class="method-name">
+			X509Certificate
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcomputeKeyIdentifier" id="computeKeyIdentifier"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">computeKeyIdentifier</span> (line <span class="line-number">4135</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compute a public key identifier.</p>
+<p class="description"><p>Although key identifiers may be set to any unique value, this function computes key identifiers from public key according to the two recommended methods (4.2.1.2 RFC 3280). Highly polymorphic: try to accept all possible forms of key: - Key object - X509Certificate object with public or private key defined - Certificate or CSR array - ASN1_Element object - PEM or DER string</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> binary key identifier</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			computeKeyIdentifier
+		</span>
+					([<span class="var-type">Mixed</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">null</span>], [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">1</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$key</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$method</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAttribute" id="getAttribute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAttribute</span> (line <span class="line-number">3990</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get a CSR attribute</p>
+<p class="description"><p>Returns the attribute if it exists and false if not</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getAttribute
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$disposition</span> = <span class="var-default">X509Certificate_ATTR_ALL</span>], [<span class="var-type">Array</span>&nbsp;<span class="var-name">$csr</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$disposition</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$csr</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAttributes" id="getAttributes"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getAttributes</span> (line <span class="line-number">4029</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a list of all CSR attributes in use</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getAttributes
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$csr</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$csr</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetChain" id="getChain"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getChain</span> (line <span class="line-number">2685</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить цепочку текущего сертификата</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getChain
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDN" id="getDN"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getDN</span> (line <span class="line-number">2455</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить уникальное имя для заголовка сертификата</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			getDN
+		</span>
+					([<span class="var-type">Mixed</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_DN_ARRAY</span>], [<span class="var-type">Array</span>&nbsp;<span class="var-name">$dn</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$format</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$dn</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDNProp" id="getDNProp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getDNProp</span> (line <span class="line-number">2364</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получение свойств уникального имени</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getDNProp
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>, [<span class="var-type">Array</span>&nbsp;<span class="var-name">$dn</span> = <span class="var-default">null</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$withType</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$propName</span>			</li>
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$dn</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$withType</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExtension" id="getExtension"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getExtension</span> (line <span class="line-number">3903</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить сертификат, CSR или расширение CRL</p>
+<p class="description"><p>Returns the extension if it exists and false if not</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getExtension
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">Array</span>&nbsp;<span class="var-name">$cert</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$cert</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExtensions" id="getExtensions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getExtensions</span> (line <span class="line-number">3914</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получение списка всех расширений, используемых в сертификате, CSR или CRL</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getExtensions
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$cert</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$cert</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIssuerDN" id="getIssuerDN"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getIssuerDN</span> (line <span class="line-number">2599</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить уникальное имя для издателя сертификата/crl</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getIssuerDN
+		</span>
+					([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_DN_ARRAY</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetIssuerDNProp" id="getIssuerDNProp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getIssuerDNProp</span> (line <span class="line-number">2643</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить свойства уникального имени владельца сертификата/crl</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getIssuerDNProp
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$withType</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$propName</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$withType</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPublicKey" id="getPublicKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPublicKey</span> (line <span class="line-number">2771</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить публичный ключ</p>
+<p class="description"><p>Возвращает объект Crypt_RSA или false.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getPublicKey
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetRevoked" id="getRevoked"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRevoked</span> (line <span class="line-number">4367</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить аннулированный сертификат.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getRevoked
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$serial</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRevokedCertificateExtension" id="getRevokedCertificateExtension"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRevokedCertificateExtension</span> (line <span class="line-number">4433</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить расширение аннулированного сертификата</p>
+<p class="description"><p>Returns the extension if it exists and false if not</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getRevokedCertificateExtension
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">Array</span>&nbsp;<span class="var-name">$crl</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$serial</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$crl</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetRevokedCertificateExtensions" id="getRevokedCertificateExtensions"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getRevokedCertificateExtensions</span> (line <span class="line-number">4455</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить список всех расширений, которые использовались в аннулированном сертификате</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			getRevokedCertificateExtensions
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$crl</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$serial</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$crl</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSubjectDN" id="getSubjectDN"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSubjectDN</span> (line <span class="line-number">2620</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить уникальное имя для заголовка сертификата/csr Превдоним функции getDN()</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getSubjectDN
+		</span>
+					([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_DN_ARRAY</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSubjectDNProp" id="getSubjectDNProp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSubjectDNProp</span> (line <span class="line-number">2664</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Получить свойства уникального имени заголовка сертификата/csr</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			getSubjectDNProp
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$withType</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$propName</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$withType</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodlistRevoked" id="listRevoked"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">listRevoked</span> (line <span class="line-number">4384</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Список аннулированных сертификатов</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			listRevoked
+		</span>
+					([<span class="var-type">array</span>&nbsp;<span class="var-name">$crl</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$crl</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadCA" id="loadCA"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadCA</span> (line <span class="line-number">1841</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Загрузка (чтение) сертификата X.509 как сертификата центра сертификации</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			loadCA
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$cert</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$cert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadCRL" id="loadCRL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadCRL</span> (line <span class="line-number">3054</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Загрузка (чтение) Certificate Revocation List</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			loadCRL
+		</span>
+					(<span class="var-type">Array</span>&nbsp;<span class="var-name">$crl</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$crl</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadCSR" id="loadCSR"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadCSR</span> (line <span class="line-number">2813</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Загрузка (чтение) подписанного запроса на сертификат</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			loadCSR
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$csr</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$csr</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadSPKAC" id="loadSPKAC"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadSPKAC</span> (line <span class="line-number">2939</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Загрузка (чтение) SPKAC CSR</p>
+<p class="description"><p>SPKAC's получается через элемент keygen HTML5:</p><p>https://developer.mozilla.org/en-US/docs/HTML/Element/keygen</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			loadSPKAC
+		</span>
+					(<span class="var-type">Array</span>&nbsp;<span class="var-name">$spkac</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$spkac</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodloadX509" id="loadX509"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadX509</span> (line <span class="line-number">1428</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Загрузка (чтение) сертификата X509</p>
+<p class="description"><p>Возвращает массив, ассоциированных с сертификатом X509, или false, если сертификат не был загружен</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			loadX509
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$cert</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$cert</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeCA" id="makeCA"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">makeCA</span> (line <span class="line-number">3679</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Отзыв сертификата в центре сертификации</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeCA
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodremoveAttribute" id="removeAttribute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeAttribute</span> (line <span class="line-number">3940</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove a CSR attribute.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			removeAttribute
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$disposition</span> = <span class="var-default">X509Certificate_ATTR_ALL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$disposition</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveDNProp" id="removeDNProp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeDNProp</span> (line <span class="line-number">2335</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Удаление свойств уникального имени</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			removeDNProp
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$propName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveExtension" id="removeExtension"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeExtension</span> (line <span class="line-number">3889</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Remove a certificate, CSR or CRL Extension</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			removeExtension
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveRevokedCertificateExtension" id="removeRevokedCertificateExtension"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeRevokedCertificateExtension</span> (line <span class="line-number">4412</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Удалить расширение аннулированного сертификата</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			removeRevokedCertificateExtension
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$serial</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrevoke" id="revoke"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">revoke</span> (line <span class="line-number">4322</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Отозвать (аннулировать) сертификат.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			revoke
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$serial</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$date</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveCRL" id="saveCRL"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveCRL</span> (line <span class="line-number">3109</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Сохранение Certificate Revocation List.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			saveCRL
+		</span>
+					(<span class="var-type">Array</span>&nbsp;<span class="var-name">$crl</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_FORMAT_PEM</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$crl</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveCSR" id="saveCSR"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveCSR</span> (line <span class="line-number">2889</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Сохранить запрос CSR</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			saveCSR
+		</span>
+					(<span class="var-type">Array</span>&nbsp;<span class="var-name">$csr</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_FORMAT_PEM</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$csr</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveSPKAC" id="saveSPKAC"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveSPKAC</span> (line <span class="line-number">3013</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Сохранение запроса SPKAC CSR</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			saveSPKAC
+		</span>
+					(<span class="var-type">Array</span>&nbsp;<span class="var-name">$spkac</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_FORMAT_PEM</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$spkac</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveX509" id="saveX509"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">saveX509</span> (line <span class="line-number">1490</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Сохранение сертификата X.509</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			saveX509
+		</span>
+					(<span class="var-type">Array</span>&nbsp;<span class="var-name">$cert</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span> = <span class="var-default">X509Certificate_FORMAT_PEM</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Array</span>
+				<span class="var-name">$cert</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAttribute" id="setAttribute"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setAttribute</span> (line <span class="line-number">4055</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set a CSR attribute</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setAttribute
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$disposition</span> = <span class="var-default">X509Certificate_ATTR_ALL</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$disposition</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetChallenge" id="setChallenge"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setChallenge</span> (line <span class="line-number">2759</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Создание запроса</p>
+<p class="description"><p>Используется для SPKAC (Signed Public Key and Challenge) CSR's</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setChallenge
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$challenge</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$challenge</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDN" id="setDN"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setDN</span> (line <span class="line-number">2414</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Установка (задание) уникального имени</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setDN
+		</span>
+					(<span class="var-type">Mixed</span>&nbsp;<span class="var-name">$dn</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$merge</span> = <span class="var-default">false</span>], [<span class="var-type">String</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'utf8String'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$dn</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$merge</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$type</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDNProp" id="setDNProp"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setDNProp</span> (line <span class="line-number">2304</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Установка (задание) свойств уникального имени</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setDNProp
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$propName</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$propValue</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">'utf8String'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$propName</span>			</li>
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$propValue</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$type</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDomain" id="setDomain"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setDomain</span> (line <span class="line-number">4239</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the domain name's which the cert is to be valid for</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			setDomain
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetEndDate" id="setEndDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setEndDate</span> (line <span class="line-number">3643</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Установка даты окончания действия сертификата</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setEndDate
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$date</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetExtension" id="setExtension"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setExtension</span> (line <span class="line-number">3928</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set a certificate, CSR or CRL Extension</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setExtension
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$critical</span> = <span class="var-default">false</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$critical</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$replace</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIPAddress" id="setIPAddress"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setIPAddress</span> (line <span class="line-number">4251</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set the IP Addresses's which the cert is to be valid for</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setIPAddress
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$ipAddress</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$ipAddress</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetKeyIdentifier" id="setKeyIdentifier"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setKeyIdentifier</span> (line <span class="line-number">4109</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the subject key identifier</p>
+<p class="description"><p>This is used by the id-ce-authorityKeyIdentifier and the id-ce-subjectKeyIdentifier extensions.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setKeyIdentifier
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPrivateKey" id="setPrivateKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPrivateKey</span> (line <span class="line-number">2746</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Установка (задание) закрытого ключа</p>
+<p class="description"><p>Ключ должен быть создан как объект Crypt_RSA</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setPrivateKey
+		</span>
+					(<span class="var-type">Object</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Object</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPublicKey" id="setPublicKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPublicKey</span> (line <span class="line-number">2732</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Установка (задание) публичного ключа</p>
+<p class="description"><p>Ключ должен быть создан как объект Crypt_RSA</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setPublicKey
+		</span>
+					(<span class="var-type">Object</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Object</span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRevokedCertificateExtension" id="setRevokedCertificateExtension"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setRevokedCertificateExtension</span> (line <span class="line-number">4480</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Установка Revoked Certificate Extension</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setRevokedCertificateExtension
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">Mixed</span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$critical</span> = <span class="var-default">false</span>], [<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$replace</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$serial</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type">Mixed</span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$critical</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$replace</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSerialNumber" id="setSerialNumber"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setSerialNumber</span> (line <span class="line-number">3670</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Установка серийного номера</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSerialNumber
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>, [<span class="var-type">$base</span>&nbsp;<span class="var-name">$base</span> = <span class="var-default">-256</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$serial</span>			</li>
+					<li>
+				<span class="var-type">$base</span>
+				<span class="var-name">$base</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetStartDate" id="setStartDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setStartDate</span> (line <span class="line-number">3633</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Установка даты начала действия сертификата</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setStartDate
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$date</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$date</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsign" id="sign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">sign</span> (line <span class="line-number">3191</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Подпись сертификата X.509</p>
+<p class="description"><p>$issuer's private key needs to be loaded. $subject can be either an existing X.509 cert (if you want to resign it), a CSR or something with the DN and public key explicitly set.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			sign
+		</span>
+					(<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$issuer</span>, <span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$subject</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$signatureAlgorithm</span> = <span class="var-default">'sha1WithRSAEncryption'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>
+				<span class="var-name">$issuer</span>			</li>
+					<li>
+				<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>
+				<span class="var-name">$subject</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$signatureAlgorithm</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsignCRL" id="signCRL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">signCRL</span> (line <span class="line-number">3481</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Подпись CRL</p>
+<p class="description"><p>$issuer's private key needs to be loaded.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			signCRL
+		</span>
+					(<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$issuer</span>, <span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$crl</span>, [<span class="var-type">String</span>&nbsp;<span class="var-name">$signatureAlgorithm</span> = <span class="var-default">'sha1WithRSAEncryption'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>
+				<span class="var-name">$issuer</span>			</li>
+					<li>
+				<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>
+				<span class="var-name">$crl</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$signatureAlgorithm</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsignCSR" id="signCSR"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">signCSR</span> (line <span class="line-number">3355</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Подпись запроса CSR</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			signCSR
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$signatureAlgorithm</span> = <span class="var-default">'sha1WithRSAEncryption'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$signatureAlgorithm</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsignSPKAC" id="signSPKAC"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">signSPKAC</span> (line <span class="line-number">3412</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Подпись SPKAC</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			signSPKAC
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$signatureAlgorithm</span> = <span class="var-default">'sha1WithRSAEncryption'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$signatureAlgorithm</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodunrevoke" id="unrevoke"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">unrevoke</span> (line <span class="line-number">4348</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Возобновить действие сертификата.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			unrevoke
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$serial</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$serial</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateDate" id="validateDate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateDate</span> (line <span class="line-number">1968</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Валидация даты</p>
+<p class="description"><p>Если параметр $date не определен, то берется текущая дата.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			validateDate
+		</span>
+					([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$date</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$date</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateSignature" id="validateSignature"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateSignature</span> (line <span class="line-number">2007</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Валидация подписи</p>
+<p class="description"><p>Работает для X.509 сертификатов, CSR's и CRL's. Возвращает true, если подпись корректна, false - подпись не корректна и null если произошла ошибка.</p><p>По умолчанию возвращается false для самоподписанных сертификатов. Call validateSignature(false) to make this support self-signed.р</p><p>The behavior of this function is inspired by <a href="http://php.net/openssl-verify">openssl_verify</a>.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			validateSignature
+		</span>
+					([<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$caonly</span> = <span class="var-default">true</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$caonly</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalidateURL" id="validateURL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">validateURL</span> (line <span class="line-number">1909</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Валидация сертификата X.509 через URL</p>
+<p class="description"><p>From RFC2818 &quot;HTTP over TLS&quot;:</p><p>Matching is performed using the matching rules specified by [RFC2459].  If more than one identity of a given type is present in the certificate (e.g., more than one dNSName name, a match in any one of the set is considered acceptable.) Names may contain the wildcard character * which is considered to match any single domain name component or component fragment. E.g., *.a.com matches foo.a.com but not bar.foo.a.com. f*.com matches foo.com but not bar.com.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			validateURL
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$url</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_sign" id="_sign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_sign</span> (line <span class="line-number">3605</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Вспомогательная функция подписи сертификата X.509</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			_sign
+		</span>
+					(<span class="var-type">Object</span>&nbsp;<span class="var-name">$key</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$signatureAlgorithm</span>, <span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>&nbsp;<span class="var-name">$subject</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Object</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type"><a href="../X509Certificate/X509Certificate.html">X509Certificate</a></span>
+				<span class="var-name">$subject</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$signatureAlgorithm</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 18 Nov 2014 16:45:25 +0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

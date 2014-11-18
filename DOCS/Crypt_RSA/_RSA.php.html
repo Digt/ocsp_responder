@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page RSA.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/RSA.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-classes">Classes</a>
+			|							<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+										</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pure-PHP PKCS#1 (v2.1) compliant implementation of RSA.</p>
+<p class="description"><p>PHP versions 4 and 5</p><p>Here's an example of how to encrypt and decrypt text with this library: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Crypt/RSA.php';
+
+&nbsp;&nbsp;&nbsp;$rsa&nbsp;=&nbsp;new&nbsp;Crypt_RSA();
+&nbsp;&nbsp;&nbsp;extract($rsa-&gt;createKey());
+
+&nbsp;&nbsp;&nbsp;$plaintext&nbsp;=&nbsp;'terrafrost';
+
+&nbsp;&nbsp;&nbsp;$rsa-&gt;loadKey($privatekey);
+&nbsp;&nbsp;&nbsp;$ciphertext&nbsp;=&nbsp;$rsa-&gt;encrypt($plaintext);
+
+&nbsp;&nbsp;&nbsp;$rsa-&gt;loadKey($publickey);
+&nbsp;&nbsp;&nbsp;echo&nbsp;$rsa-&gt;decrypt($ciphertext);
+?&gt;</ol></div></p><p>Here's an example of how to create signatures and verify signatures with this library: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Crypt/RSA.php';
+
+&nbsp;&nbsp;&nbsp;$rsa&nbsp;=&nbsp;new&nbsp;Crypt_RSA();
+&nbsp;&nbsp;&nbsp;extract($rsa-&gt;createKey());
+
+&nbsp;&nbsp;&nbsp;$plaintext&nbsp;=&nbsp;'terrafrost';
+
+&nbsp;&nbsp;&nbsp;$rsa-&gt;loadKey($privatekey);
+&nbsp;&nbsp;&nbsp;$signature&nbsp;=&nbsp;$rsa-&gt;sign($plaintext);
+
+&nbsp;&nbsp;&nbsp;$rsa-&gt;loadKey($publickey);
+&nbsp;&nbsp;&nbsp;echo&nbsp;$rsa-&gt;verify($plaintext,&nbsp;$signature)&nbsp;?&nbsp;'verified'&nbsp;:&nbsp;'unverified';
+?&gt;</ol></div></p><p>LICENSE: Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p><p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p><p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Jim Wigginton &lt;<a href="mailto:terrafrost@php.net">terrafrost@php.net</a>&gt;</li>
+				<li><span class="field">copyright:</span> MMIX Jim Wigginton</li>
+				<li><span class="field">link:</span> <a href="http://phpseclib.sourceforge.net">http://phpseclib.sourceforge.net</a></li>
+				<li><span class="field">license:</span> <a href="http://www.opensource.org/licenses/mit-license.html">MIT License</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+	<a name="sec-classes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Classes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Classes</span>
+			|							<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+															</div>
+		<div class="info-box-body">	
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; vertical-align: top">
+						<a href="../Crypt_RSA/Crypt_RSA.html">Crypt_RSA</a>
+					</td>
+					<td>
+											Pure-PHP PKCS#1 compliant implementation of RSA.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+															</div>
+		<div class="info-box-body">	
+			<a name="_Random_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../Crypt_Random/_Random.php.html">"Random.php"</a></span>)
+			(line <span class="line-number">77</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Include Crypt_Random</p>
+	
+</div>
+<a name="_Hash_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">include_once</span>
+			(<span class="include-name"><a href="../Crypt_Hash/_Hash.php.html">"Hash.php"</a></span>)
+			(line <span class="line-number">84</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Include Crypt_Hash</p>
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-classes">Classes</a>
+				|										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+											</div>
+		<div class="info-box-body">	
+			<a name="defineCRYPT_RSA_ENCRYPTION_OAEP"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_ENCRYPTION_OAEP</span> = 1
+			(line <span class="line-number">101</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use <a href="http://en.wikipedia.org/wiki/Optimal_Asymmetric_Encryption_Padding">Optimal Asymmetric Encryption Padding</a> (OAEP) for encryption / decryption.</p>
+<p class="description"><p>Uses sha1 by default.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> Crypt_RSA::encrypt()
+ @</li>
+				<li><span class="field">see:</span> Crypt_RSA::setHash()
+ @</li>
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methoddecrypt">Crypt_RSA::decrypt()</a></li>
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetMGFHash">Crypt_RSA::setMGFHash()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_ENCRYPTION_PKCS1"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_ENCRYPTION_PKCS1</span> = 2
+			(line <span class="line-number">108</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use PKCS#1 padding.</p>
+<p class="description"><p>Although CRYPT_RSA_ENCRYPTION_OAEP offers more security, including PKCS#1 padding is necessary for purposes of backwards compatibility with protocols (like SSH-1) written before OAEP's introduction.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methoddecrypt">Crypt_RSA::decrypt()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::encrypt()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_OPENSSL_CONFIG"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_OPENSSL_CONFIG</span> = dirname(__FILE__)./../openssl.cnf
+			(line <span class="line-number">180</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default openSSL configuration file.</p>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PRIVATE_FORMAT_PKCS1"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PRIVATE_FORMAT_PKCS1</span> = 0
+			(line <span class="line-number">192</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PKCS#1 formatted private key</p>
+<p class="description"><p>Used by OpenSSH</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPrivateKeyFormat">Crypt_RSA::setPrivateKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PRIVATE_FORMAT_PKCS8"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PRIVATE_FORMAT_PKCS8</span> = 3
+			(line <span class="line-number">204</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PKCS#8 formatted private key</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPrivateKeyFormat">Crypt_RSA::setPrivateKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PRIVATE_FORMAT_PUTTY"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PRIVATE_FORMAT_PUTTY</span> = 1
+			(line <span class="line-number">196</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PuTTY formatted private key</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPrivateKeyFormat">Crypt_RSA::setPrivateKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PRIVATE_FORMAT_XML"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PRIVATE_FORMAT_XML</span> = 2
+			(line <span class="line-number">200</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML formatted private key</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPrivateKeyFormat">Crypt_RSA::setPrivateKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PUBLIC_FORMAT_OPENSSH"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PUBLIC_FORMAT_OPENSSH</span> = 6
+			(line <span class="line-number">248</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OpenSSH formatted public key</p>
+<p class="description"><p>Place in $HOME/.ssh/authorized_keys</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPublicKeyFormat">Crypt_RSA::setPublicKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PUBLIC_FORMAT_PKCS1"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PUBLIC_FORMAT_PKCS1</span> = 4
+			(line <span class="line-number">237</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PKCS#1 formatted public key (raw)</p>
+<p class="description"><p>Used by File/X509.php</p><p>Has the following header:</p><p>-----BEGIN RSA PUBLIC KEY-----</p><p>Analogous to ssh-keygen's pem format (as specified by -m)</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPublicKeyFormat">Crypt_RSA::setPublicKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PUBLIC_FORMAT_PKCS1_RAW"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PUBLIC_FORMAT_PKCS1_RAW</span> = 4
+			(line <span class="line-number">238</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPublicKeyFormat">Crypt_RSA::setPublicKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PUBLIC_FORMAT_PKCS8"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PUBLIC_FORMAT_PKCS8</span> = 7
+			(line <span class="line-number">262</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PKCS#1 formatted public key (encapsulated)</p>
+<p class="description"><p>Used by PHP's openssl_public_encrypt() and openssl's rsautl (when -pubin is set)</p><p>Has the following header:</p><p>-----BEGIN PUBLIC KEY-----</p><p>Analogous to ssh-keygen's pkcs8 format (as specified by -m). Although PKCS8 is specific to private keys it's basically creating a DER-encoded wrapper for keys. This just extends that same concept to public keys (much like ssh-keygen)</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPublicKeyFormat">Crypt_RSA::setPublicKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PUBLIC_FORMAT_RAW"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PUBLIC_FORMAT_RAW</span> = 3
+			(line <span class="line-number">225</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Raw public key</p>
+<p class="description"><p>An array containing two Math_BigInteger objects.</p><p>The exponent can be indexed with any of the following:</p><p>0, e, exponent, publicExponent</p><p>The modulus can be indexed with any of the following:</p><p>1, n, modulo, modulus</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPublicKeyFormat">Crypt_RSA::setPublicKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_PUBLIC_FORMAT_XML"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_PUBLIC_FORMAT_XML</span> = 5
+			(line <span class="line-number">242</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">XML formatted public key</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetPublicKeyFormat">Crypt_RSA::setPublicKeyFormat()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_SIGNATURE_PKCS1"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_SIGNATURE_PKCS1</span> = 2
+			(line <span class="line-number">132</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use the PKCS#1 scheme by default.</p>
+<p class="description"><p>Although CRYPT_RSA_SIGNATURE_PSS offers more security, including PKCS#1 signing is necessary for purposes of backwards compatibility with protocols (like SSH-2) written before PSS's introduction.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> Crypt_RSA::sign()
+ @</li>
+				<li><span class="field">see:</span> Crypt_RSA::verify()
+ @</li>
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetHash">Crypt_RSA::setHash()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+<a name="defineCRYPT_RSA_SIGNATURE_PSS"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">CRYPT_RSA_SIGNATURE_PSS</span> = 1
+			(line <span class="line-number">125</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Use the Probabilistic Signature Scheme for signing</p>
+<p class="description"><p>Uses sha1 by default.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> Crypt_RSA::sign()
+ @</li>
+				<li><span class="field">see:</span> Crypt_RSA::verify()
+ @</li>
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetHash">Crypt_RSA::setHash()</a></li>
+				<li><span class="field">see:</span> Crypt_RSA::setSaltLength()
+ @</li>
+				<li><span class="field">see:</span> <a href="../Crypt_RSA/Crypt_RSA.html#methodsetMGFHash">Crypt_RSA::setMGFHash()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 18 Nov 2014 16:45:25 +0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

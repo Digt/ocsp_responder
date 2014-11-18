@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Crypt_RSA</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Crypt_RSA</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pure-PHP PKCS#1 compliant implementation of RSA.</p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Jim Wigginton &lt;<a href="mailto:terrafrost@php.net">terrafrost@php.net</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_RSA.php.html">/RSA.php</a> (line <span class="field">272</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<span class="var-type">Mixed</span>
+					<a href="#$configFile" title="details" class="var-name">$configFile</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">Integer</span>
+					<a href="#$publicKeyFormat" title="details" class="var-name">$publicKeyFormat</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																				
+												<div class="method-definition">
+											<span class="method-result"><a href="../Crypt_RSA/Crypt_RSA.html">Crypt_RSA</a></span>
+										<a href="#Crypt_RSA" title="details" class="method-name">Crypt_RSA</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#createKey" title="details" class="method-name">createKey</a>
+											([<span class="var-type">optional</span>&nbsp;<span class="var-name">$bits</span> = <span class="var-default">1024</span>], [<span class="var-type">optional</span>&nbsp;<span class="var-name">$timeout</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$partial</span> = <span class="var-default">array()</span>], <span class="var-type">optional</span>&nbsp;<span class="var-name">$p</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#decrypt" title="details" class="method-name">decrypt</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$ciphertext</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$plaintext</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#encrypt" title="details" class="method-name">encrypt</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$plaintext</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#getComment" title="details" class="method-name">getComment</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getPrivateKey" title="details" class="method-name">getPrivateKey</a>
+											([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">CRYPT_RSA_PUBLIC_FORMAT_PKCS1</span>], <span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getPublicKey" title="details" class="method-name">getPublicKey</a>
+											([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">CRYPT_RSA_PUBLIC_FORMAT_PKCS8</span>], <span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Integer</span>
+										<a href="#getSize" title="details" class="method-name">getSize</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#loadKey" title="details" class="method-name">loadKey</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setComment" title="details" class="method-name">setComment</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$comment</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setEncryptionMode" title="details" class="method-name">setEncryptionMode</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$mode</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setHash" title="details" class="method-name">setHash</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$hash</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setMGFHash" title="details" class="method-name">setMGFHash</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$hash</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setPassword" title="details" class="method-name">setPassword</a>
+											([<span class="var-type">String</span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setPrivateKey" title="details" class="method-name">setPrivateKey</a>
+											([<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">false</span>], [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setPrivateKeyFormat" title="details" class="method-name">setPrivateKeyFormat</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#setPublicKey" title="details" class="method-name">setPublicKey</a>
+											([<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">false</span>], [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setPublicKeyFormat" title="details" class="method-name">setPublicKeyFormat</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setSaltLength" title="details" class="method-name">setSaltLength</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sLen</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setSignatureMode" title="details" class="method-name">setSignatureMode</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$mode</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#sign" title="details" class="method-name">sign</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$message</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#verify" title="details" class="method-name">verify</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$signature</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__clone" title="details" class="method-name">__clone</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$configFile" id="$configFile"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Mixed</span>
+			<span class="var-name">$configFile</span>
+						(line <span class="line-number">466</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">OpenSSL configuration file name.</p>
+<p class="description"><p>Set to null to use system configuration file.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> Crypt_RSA::createKey()
+ @</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$publicKeyFormat" id="$publicKeyFormat"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">Integer</span>
+			<span class="var-name">$publicKeyFormat</span>
+			 = <span class="var-default">CRYPT_RSA_PUBLIC_FORMAT_PKCS8</span>			(line <span class="line-number">304</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Public Key Format</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodCrypt_RSA" id="Crypt_RSA"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Crypt_RSA</span> (line <span class="line-number">486</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The constructor</p>
+<p class="description"><p>If you want to make use of the openssl extension, you'll need to set the mode manually, yourself.  The reason Crypt_RSA doesn't do it is because OpenSSL doesn't fail gracefully.  openssl_pkey_new(), in particular, requires openssl.cnf be present somewhere and, unfortunately, the only real way to find out is too late.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Crypt_RSA/Crypt_RSA.html">Crypt_RSA</a></span>
+		<span class="method-name">
+			Crypt_RSA
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcreateKey" id="createKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createKey</span> (line <span class="line-number">563</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create public / private key pair</p>
+<p class="description"><p>Returns an array with the following three elements: <ul><li>'privatekey': The private key.</li><li>'publickey':  The public key.</li><li>'partialkey': A partially computed key (if the execution time exceeded $timeout).
+                 Will need to be passed back to Crypt_RSA::createKey() as the third parameter for further processing.</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			createKey
+		</span>
+					([<span class="var-type">optional</span>&nbsp;<span class="var-name">$bits</span> = <span class="var-default">1024</span>], [<span class="var-type">optional</span>&nbsp;<span class="var-name">$timeout</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$partial</span> = <span class="var-default">array()</span>], <span class="var-type">optional</span>&nbsp;<span class="var-name">$p</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$bits</span><span class="var-description">: Integer</span>			</li>
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$timeout</span><span class="var-description">: Integer</span>			</li>
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$p</span><span class="var-description">: Math_BigInteger</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$partial</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddecrypt" id="decrypt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">decrypt</span> (line <span class="line-number">2892</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Decryption</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> encrypt()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			decrypt
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$ciphertext</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$plaintext</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$plaintext</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$ciphertext</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodencrypt" id="encrypt"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">encrypt</span> (line <span class="line-number">2853</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Encryption</p>
+<p class="description"><p>Both CRYPT_RSA_ENCRYPTION_OAEP and CRYPT_RSA_ENCRYPTION_PKCS1 both place limits on how long $plaintext can be. If $plaintext exceeds those limits it will be broken up so that it does and the resultant ciphertext's will be concatenated together.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> decrypt()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			encrypt
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$plaintext</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$plaintext</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetComment" id="getComment"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getComment</span> (line <span class="line-number">2836</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Get public key comment.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			getComment
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetPrivateKey" id="getPrivateKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPrivateKey</span> (line <span class="line-number">1784</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the private key</p>
+<p class="description"><p>The private key is only returned if the currently loaded key contains the constituent prime numbers.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> getPublicKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getPrivateKey
+		</span>
+					([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">CRYPT_RSA_PUBLIC_FORMAT_PKCS1</span>], <span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$type</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPublicKey" id="getPublicKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getPublicKey</span> (line <span class="line-number">1761</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the public key</p>
+<p class="description"><p>The public key is only returned under two circumstances - if the private key had the public key embedded within it or if the public key was set via setPublicKey().  If the currently loaded key is supposed to be the public key this function won't return it since this library, for the most part, doesn't distinguish between public and private keys.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> getPublicKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getPublicKey
+		</span>
+					([<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">CRYPT_RSA_PUBLIC_FORMAT_PKCS8</span>], <span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$type</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSize" id="getSize"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getSize</span> (line <span class="line-number">1439</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the key size</p>
+<p class="description"><p>More specifically, this returns the size of the modulo in bits.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Integer</span>
+		<span class="method-name">
+			getSize
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodloadKey" id="loadKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">loadKey</span> (line <span class="line-number">1528</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Loads a public or private key</p>
+<p class="description"><p>Returns true on success and false on failure (ie. an incorrect password was provided or the key was malformed)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			loadKey
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span>, [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$type</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetComment" id="setComment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setComment</span> (line <span class="line-number">2825</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set public key comment.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setComment
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$comment</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$comment</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetEncryptionMode" id="setEncryptionMode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setEncryptionMode</span> (line <span class="line-number">2801</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Encryption Mode</p>
+<p class="description"><p>Valid values include CRYPT_RSA_ENCRYPTION_OAEP and CRYPT_RSA_ENCRYPTION_PKCS1.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setEncryptionMode
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$mode</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHash" id="setHash"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setHash</span> (line <span class="line-number">1965</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines which hashing function should be used</p>
+<p class="description"><p>Used with signature production / verification and (if the encryption mode is CRYPT_RSA_ENCRYPTION_OAEP) encryption and decryption.  If $hash isn't supported, sha1 is used.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setHash
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$hash</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$hash</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMGFHash" id="setMGFHash"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setMGFHash</span> (line <span class="line-number">1994</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines which hashing function should be used for the mask generation function</p>
+<p class="description"><p>The mask generation function is used by CRYPT_RSA_ENCRYPTION_OAEP and CRYPT_RSA_SIGNATURE_PSS and although it's best if Hash and MGFHash are set to the same thing this is not a requirement.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setMGFHash
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$hash</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$hash</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPassword" id="setPassword"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPassword</span> (line <span class="line-number">1645</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the password</p>
+<p class="description"><p>Private keys can be encrypted with a password.  To unset the password, pass in the empty string or false. Or rather, pass in $password such that empty($password) &amp;&amp; !is_string($password) is true.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> createKey()
+ @</li>
+				<li><span class="field">see:</span> loadKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPassword
+		</span>
+					([<span class="var-type">String</span>&nbsp;<span class="var-name">$password</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$password</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPrivateKey" id="setPrivateKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPrivateKey</span> (line <span class="line-number">1731</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Defines the private key</p>
+<p class="description"><p>If phpseclib guessed a private key was a public key and loaded it as such it might be desirable to force phpseclib to treat the key as a private key. This function will do that.</p><p>Do note that when a new key is loaded the index will be cleared.</p><p>Returns true on success, false on failure</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> getPublicKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setPrivateKey
+		</span>
+					([<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">false</span>], [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$type</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPrivateKeyFormat" id="setPrivateKeyFormat"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPrivateKeyFormat</span> (line <span class="line-number">1939</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines the private key format</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPrivateKeyFormat
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPublicKey" id="setPublicKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPublicKey</span> (line <span class="line-number">1671</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Defines the public key</p>
+<p class="description"><p>Some private key formats define the public exponent and some don't.  Those that don't define it are problematic when used in certain contexts.  For example, in SSH-2, RSA authentication works by sending the public key along with a message signed by the private key to the server.  The SSH-2 server looks the public key up in an index of public keys and if it's present then proceeds to verify the signature.  Problem is, if your private key doesn't include the public exponent this won't work unless you manually add the public exponent. phpseclib tries to guess if the key being used is the public key but in the event that it guesses incorrectly you might still want to explicitly set the key as being public.</p><p>Do note that when a new key is loaded the index will be cleared.</p><p>Returns true on success, false on failure</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> getPublicKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			setPublicKey
+		</span>
+					([<span class="var-type">String</span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">false</span>], [<span class="var-type">Integer</span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$key</span><span class="var-description">: optional</span>			</li>
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$type</span><span class="var-description">: optional</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPublicKeyFormat" id="setPublicKeyFormat"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPublicKeyFormat</span> (line <span class="line-number">1951</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines the public key format</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> createKey()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPublicKeyFormat
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSaltLength" id="setSaltLength"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setSaltLength</span> (line <span class="line-number">2023</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Determines the salt length</p>
+<p class="description"><p>To quote from <a href="http://tools.ietf.org/html/rfc3447#page-38">RFC3447#page-38</a>:</p><p>Typical salt lengths in octets are hLen (the length of the output    of the hash function Hash) and 0.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSaltLength
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sLen</span>, <span class="var-type">Integer</span>&nbsp;<span class="var-name">$format</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$format</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sLen</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSignatureMode" id="setSignatureMode"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setSignatureMode</span> (line <span class="line-number">2814</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Signature Mode</p>
+<p class="description"><p>Valid values include CRYPT_RSA_SIGNATURE_PSS and CRYPT_RSA_SIGNATURE_PKCS1</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setSignatureMode
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$mode</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$mode</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsign" id="sign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">sign</span> (line <span class="line-number">2931</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Create a signature</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> verify()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			sign
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$message</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$message</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodverify" id="verify"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">verify</span> (line <span class="line-number">2955</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Verifies a signature</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> sign()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			verify
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$message</span>, <span class="var-type">String</span>&nbsp;<span class="var-name">$signature</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$message</span>			</li>
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$signature</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__clone" id="__clone"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__clone</span> (line <span class="line-number">1841</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">__clone() magic method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__clone
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__toString</span> (line <span class="line-number">1826</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">__toString() magic method</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 18 Nov 2014 16:45:25 +0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

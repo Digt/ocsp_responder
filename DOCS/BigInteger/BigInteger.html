@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class BigInteger</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class BigInteger</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Pure-PHP arbitrary precision integer arithmetic library.</p>
+<p class="description"><p>Supports base-2, base-10, base-16, and base-256 numbers.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Jim Wigginton &lt;<a href="mailto:terrafrost@php.net">terrafrost@php.net</a>&gt;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_BigInteger.php.html">/BigInteger.php</a> (line <span class="field">175</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#BigInteger" title="details" class="method-name">BigInteger</a>
+											([<span class="var-type">optional</span>&nbsp;<span class="var-name">$x</span> = <span class="var-default">0</span>], [<span class="var-type">optional</span>&nbsp;<span class="var-name">$base</span> = <span class="var-default">10</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#abs" title="details" class="method-name">abs</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#add" title="details" class="method-name">add</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$y</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#bitwise_and" title="details" class="method-name">bitwise_and</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#bitwise_leftRotate" title="details" class="method-name">bitwise_leftRotate</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$shift</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#bitwise_leftShift" title="details" class="method-name">bitwise_leftShift</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$shift</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#bitwise_not" title="details" class="method-name">bitwise_not</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#bitwise_or" title="details" class="method-name">bitwise_or</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#bitwise_rightRotate" title="details" class="method-name">bitwise_rightRotate</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$shift</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#bitwise_rightShift" title="details" class="method-name">bitwise_rightShift</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$shift</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#bitwise_xor" title="details" class="method-name">bitwise_xor</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Integer</span>
+										<a href="#compare" title="details" class="method-name">compare</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$y</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#copy" title="details" class="method-name">copy</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Array</span>
+										<a href="#divide" title="details" class="method-name">divide</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$y</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#equals" title="details" class="method-name">equals</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#extendedGCD" title="details" class="method-name">extendedGCD</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#gcd" title="details" class="method-name">gcd</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Boolean</span>
+										<a href="#isPrime" title="details" class="method-name">isPrime</a>
+											([<span class="var-type">optional</span>&nbsp;<span class="var-name">$t</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#modInverse" title="details" class="method-name">modInverse</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#modPow" title="details" class="method-name">modPow</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$e</span>, <span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#multiply" title="details" class="method-name">multiply</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#powMod" title="details" class="method-name">powMod</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$e</span>, <span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#random" title="details" class="method-name">random</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$arg1</span>, [<span class="var-type">optional</span>&nbsp;<span class="var-name">$arg2</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">Mixed</span>
+										<a href="#randomPrime" title="details" class="method-name">randomPrime</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$arg1</span>, [<span class="var-type">optional</span>&nbsp;<span class="var-name">$arg2</span> = <span class="var-default">false</span>], [<span class="var-type">optional</span>&nbsp;<span class="var-name">$timeout</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setPrecision" title="details" class="method-name">setPrecision</a>
+											(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$bits</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#setRandomGenerator" title="details" class="method-name">setRandomGenerator</a>
+											(<span class="var-type">String</span>&nbsp;<span class="var-name">$generator</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#subtract" title="details" class="method-name">subtract</a>
+											(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$y</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#toBits" title="details" class="method-name">toBits</a>
+											([<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$twos_compliment</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#toBytes" title="details" class="method-name">toBytes</a>
+											([<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$twos_compliment</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#toHex" title="details" class="method-name">toHex</a>
+											([<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$twos_compliment</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">String</span>
+										<a href="#toString" title="details" class="method-name">toString</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+										<a href="#__clone" title="details" class="method-name">__clone</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__sleep" title="details" class="method-name">__sleep</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__wakeup" title="details" class="method-name">__wakeup</a>
+										()
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodBigInteger" id="BigInteger"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor BigInteger</span> (line <span class="line-number">253</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts base-2, base-10, base-16, and binary strings (base-256) to BigIntegers.</p>
+<p class="description"><p>If the second parameter - $base - is negative, then it will be assumed that the number's are encoded using two's compliment.  The sole exception to this is -10, which is treated the same as 10 is.</p><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('0x32',&nbsp;16);&nbsp;//&nbsp;50&nbsp;in&nbsp;base-16
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$a-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;50
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			BigInteger
+		</span>
+					([<span class="var-type">optional</span>&nbsp;<span class="var-name">$x</span> = <span class="var-default">0</span>], [<span class="var-type">optional</span>&nbsp;<span class="var-name">$base</span> = <span class="var-default">10</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$x</span><span class="var-description">: base-10 number or base-$base number if $base set.</span>			</li>
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$base</span><span class="var-description">: integer</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodabs" id="abs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">abs</span> (line <span class="line-number">2628</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Absolute value.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			abs
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodadd" id="add"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">add</span> (line <span class="line-number">839</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds two BigIntegers.</p>
+<p class="description"><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('10');
+&nbsp;&nbsp;&nbsp;$b&nbsp;=&nbsp;new&nbsp;BigInteger('20');
+
+&nbsp;&nbsp;&nbsp;$c&nbsp;=&nbsp;$a-&gt;add($b);
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$c-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;30
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			add
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$y</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$y</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbitwise_and" id="bitwise_and"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">bitwise_and</span> (line <span class="line-number">2762</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logical And</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			bitwise_and
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$x</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbitwise_leftRotate" id="bitwise_leftRotate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">bitwise_leftRotate</span> (line <span class="line-number">2996</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logical Left Rotate</p>
+<p class="description"><p>Instead of the top x bits being dropped they're appended to the shifted bit string.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			bitwise_leftRotate
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$shift</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$shift</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbitwise_leftShift" id="bitwise_leftShift"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">bitwise_leftShift</span> (line <span class="line-number">2959</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logical Left Shift</p>
+<p class="description"><p>Shifts BigInteger's by $shift bits, effectively multiplying by 2**$shift.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			bitwise_leftShift
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$shift</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$shift</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbitwise_not" id="bitwise_not"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">bitwise_not</span> (line <span class="line-number">2882</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logical Not</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			bitwise_not
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodbitwise_or" id="bitwise_or"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">bitwise_or</span> (line <span class="line-number">2803</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logical Or</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			bitwise_or
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$x</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbitwise_rightRotate" id="bitwise_rightRotate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">bitwise_rightRotate</span> (line <span class="line-number">3040</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logical Right Rotate</p>
+<p class="description"><p>Instead of the bottom x bits being dropped they're prepended to the shifted bit string.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			bitwise_rightRotate
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$shift</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$shift</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbitwise_rightShift" id="bitwise_rightShift"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">bitwise_rightShift</span> (line <span class="line-number">2921</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logical Right Shift</p>
+<p class="description"><p>Shifts BigInteger's by $shift bits, effectively dividing by 2**$shift.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			bitwise_rightShift
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$shift</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$shift</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodbitwise_xor" id="bitwise_xor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">bitwise_xor</span> (line <span class="line-number">2843</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Logical Exclusive-Or</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			bitwise_xor
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$x</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcompare" id="compare"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">compare</span> (line <span class="line-number">2664</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compares two numbers.</p>
+<p class="description"><p>Although one might think !$x-&gt;compare($y) means $x != $y, it, in fact, means the opposite.  The reason for this is demonstrated thusly:</p><p>$x  &gt; $y: $x-&gt;compare($y)  &gt; 0 $x  &lt; $y: $x-&gt;compare($y)  &lt; 0 $x == $y: $x-&gt;compare($y) == 0</p><p>Note how the same comparison operator is used.  If you want to test for equality, use $x-&gt;equals($y).</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> &lt; 0 if $this is less than $y; &gt; 0 if $this is greater than $y, and 0 if they are equal.</li>
+				<li><span class="field">see:</span> equals()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Integer</span>
+		<span class="method-name">
+			compare
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$y</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$y</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcopy" id="copy"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">copy</span> (line <span class="line-number">733</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Copy an object</p>
+<p class="description"><p>PHP5 passes objects by reference while PHP4 passes by value.  As such, we need a function to guarantee that all objects are passed by value, when appropriate.  More information can be found here:</p><p><a href="http://php.net/language.oop5.basic#51624">http://php.net/language.oop5.basic#51624</a></p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> __clone()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			copy
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddivide" id="divide"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">divide</span> (line <span class="line-number">1392</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Divides two BigIntegers.</p>
+<p class="description"><p>Returns an array whose first element contains the quotient and whose second element contains the &quot;common residue&quot;.  If the remainder would be positive, the &quot;common residue&quot; and the remainder are the same.  If the remainder would be negative, the &quot;common residue&quot; is equal to the sum of the remainder and the divisor (basically, the &quot;common residue&quot; is the first positive modulo).</p><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('10');
+&nbsp;&nbsp;&nbsp;$b&nbsp;=&nbsp;new&nbsp;BigInteger('20');
+
+&nbsp;&nbsp;&nbsp;list($quotient,&nbsp;$remainder)&nbsp;=&nbsp;$a-&gt;divide($b);
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$quotient-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;0
+&nbsp;&nbsp;&nbsp;echo&nbsp;&quot;\r\n&quot;;
+&nbsp;&nbsp;&nbsp;echo&nbsp;$remainder-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;10
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Array</span>
+		<span class="method-name">
+			divide
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$y</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$y</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodequals" id="equals"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">equals</span> (line <span class="line-number">2722</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Tests the equality of two numbers.</p>
+<p class="description"><p>If you need to see if one number is greater than or less than another number, use BigInteger::compare()</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../BigInteger/BigInteger.html#methodcompare">BigInteger::compare()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			equals
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$x</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodextendedGCD" id="extendedGCD"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">extendedGCD</span> (line <span class="line-number">2485</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculates the greatest common divisor and Bezout's identity.</p>
+<p class="description"><p>Say you have 693 and 609.  The GCD is 21.  Bezout's identity states that there exist integers x and y such that 693*x + 609*y == 21.  In point of fact, there are actually an infinite number of x and y combinations and which combination is returned is dependant upon which mode is in use.  See for more information.</p><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger(693);
+&nbsp;&nbsp;&nbsp;$b&nbsp;=&nbsp;new&nbsp;BigInteger(609);
+
+&nbsp;&nbsp;&nbsp;extract($a-&gt;extendedGCD($b));
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$gcd-&gt;toString()&nbsp;.&nbsp;&quot;\r\n&quot;;&nbsp;//&nbsp;outputs&nbsp;21
+&nbsp;&nbsp;&nbsp;echo&nbsp;$a-&gt;toString()&nbsp;*&nbsp;$x-&gt;toString()&nbsp;+&nbsp;$b-&gt;toString()&nbsp;*&nbsp;$y-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;21
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			extendedGCD
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgcd" id="gcd"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">gcd</span> (line <span class="line-number">2616</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculates the greatest common divisor</p>
+<p class="description"><p>Say you have 693 and 609.  The GCD is 21.</p><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger(693);
+&nbsp;&nbsp;&nbsp;$b&nbsp;=&nbsp;new&nbsp;BigInteger(609);
+
+&nbsp;&nbsp;&nbsp;$gcd&nbsp;=&nbsp;a-&gt;extendedGCD($b);
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$gcd-&gt;toString()&nbsp;.&nbsp;&quot;\r\n&quot;;&nbsp;//&nbsp;outputs&nbsp;21
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			gcd
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisPrime" id="isPrime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">isPrime</span> (line <span class="line-number">3318</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Checks a numer to see if it's prime</p>
+<p class="description"><p>Assuming the $t parameter is not set, this function has an error rate of 2**-80.  The main motivation for the $t parameter is distributability.  BigInteger::randomPrime() can be distributed across multiple pageloads on a website instead of just one.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Boolean</span>
+		<span class="method-name">
+			isPrime
+		</span>
+					([<span class="var-type">optional</span>&nbsp;<span class="var-name">$t</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$t</span><span class="var-description">: BigInteger</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmodInverse" id="modInverse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">modInverse</span> (line <span class="line-number">2419</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Calculates modular inverses.</p>
+<p class="description"><p>Say you have (30 mod 17 * x mod 17) mod 17 == 1.  x can be found using modular inverses.</p><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger(30);
+&nbsp;&nbsp;&nbsp;$b&nbsp;=&nbsp;new&nbsp;BigInteger(17);
+
+&nbsp;&nbsp;&nbsp;$c&nbsp;=&nbsp;$a-&gt;modInverse($b);
+&nbsp;&nbsp;&nbsp;echo&nbsp;$c-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;4
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;&quot;\r\n&quot;;
+
+&nbsp;&nbsp;&nbsp;$d&nbsp;=&nbsp;$a-&gt;multiply($c);
+&nbsp;&nbsp;&nbsp;list(,&nbsp;$d)&nbsp;=&nbsp;$d-&gt;divide($b);
+&nbsp;&nbsp;&nbsp;echo&nbsp;$d;&nbsp;//&nbsp;outputs&nbsp;1&nbsp;(as&nbsp;per&nbsp;the&nbsp;definition&nbsp;of&nbsp;modular&nbsp;inverse)
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false, if no modular inverse exists, BigInteger, otherwise.</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			modInverse
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmodPow" id="modPow"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">modPow</span> (line <span class="line-number">1629</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Performs modular exponentiation.</p>
+<p class="description"><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('10');
+&nbsp;&nbsp;&nbsp;$b&nbsp;=&nbsp;new&nbsp;BigInteger('20');
+&nbsp;&nbsp;&nbsp;$c&nbsp;=&nbsp;new&nbsp;BigInteger('30');
+
+&nbsp;&nbsp;&nbsp;$c&nbsp;=&nbsp;$a-&gt;modPow($b,&nbsp;$c);
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$c-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;10
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			modPow
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$e</span>, <span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$e</span>			</li>
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmultiply" id="multiply"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">multiply</span> (line <span class="line-number">1105</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Multiplies two BigIntegers</p>
+<p class="description"><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('10');
+&nbsp;&nbsp;&nbsp;$b&nbsp;=&nbsp;new&nbsp;BigInteger('20');
+
+&nbsp;&nbsp;&nbsp;$c&nbsp;=&nbsp;$a-&gt;multiply($b);
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$c-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;200
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			multiply
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$x</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$x</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodpowMod" id="powMod"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">powMod</span> (line <span class="line-number">1774</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Performs modular exponentiation.</p>
+<p class="description"><p>Alias for BigInteger::modPow()</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			powMod
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$e</span>, <span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$n</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$e</span>			</li>
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$n</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrandom" id="random"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">random</span> (line <span class="line-number">3103</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate a random number</p>
+<p class="description"><p>Returns a random number between $min and $max where $min and $max can be defined using one of the two methods:</p><p>$min-&gt;random($max) $max-&gt;random($min)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			random
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$arg1</span>, [<span class="var-type">optional</span>&nbsp;<span class="var-name">$arg2</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$arg1</span>			</li>
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$arg2</span><span class="var-description">: BigInteger</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrandomPrime" id="randomPrime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">randomPrime</span> (line <span class="line-number">3188</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate a random prime number.</p>
+<p class="description"><p>If there's not a prime within the given range, false will be returned.  If more than $timeout seconds have elapsed, give up and return false.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Mixed</span>
+		<span class="method-name">
+			randomPrime
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$arg1</span>, [<span class="var-type">optional</span>&nbsp;<span class="var-name">$arg2</span> = <span class="var-default">false</span>], [<span class="var-type">optional</span>&nbsp;<span class="var-name">$timeout</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$arg1</span>			</li>
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$arg2</span><span class="var-description">: BigInteger</span>			</li>
+					<li>
+				<span class="var-type">optional</span>
+				<span class="var-name">$timeout</span><span class="var-description">: Integer</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetPrecision" id="setPrecision"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">setPrecision</span> (line <span class="line-number">2741</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set Precision</p>
+<p class="description"><p>Some bitwise operations give different results depending on the precision being used.  Examples include left shift, not, and rotates.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setPrecision
+		</span>
+					(<span class="var-type">Integer</span>&nbsp;<span class="var-name">$bits</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Integer</span>
+				<span class="var-name">$bits</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRandomGenerator" id="setRandomGenerator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">setRandomGenerator</span> (line <span class="line-number">3053</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set random number generator function</p>
+<p class="description"><p>This function is deprecated.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			setRandomGenerator
+		</span>
+					(<span class="var-type">String</span>&nbsp;<span class="var-name">$generator</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">String</span>
+				<span class="var-name">$generator</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsubtract" id="subtract"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">subtract</span> (line <span class="line-number">970</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Subtracts two BigIntegers.</p>
+<p class="description"><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('10');
+&nbsp;&nbsp;&nbsp;$b&nbsp;=&nbsp;new&nbsp;BigInteger('20');
+
+&nbsp;&nbsp;&nbsp;$c&nbsp;=&nbsp;$a-&gt;subtract($b);
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$c-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;-10
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			subtract
+		</span>
+					(<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>&nbsp;<span class="var-name">$y</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+				<span class="var-name">$y</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoBits" id="toBits"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">toBits</span> (line <span class="line-number">645</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a BigInteger to a bit string (eg.</p>
+<p class="description"><p>base-2).</p><p>Negative numbers are saved as positive numbers, unless $twos_compliment is set to true, at which point, they're saved as two's compliment.</p><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('65');
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$a-&gt;toBits();&nbsp;//&nbsp;outputs&nbsp;'1000001'
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			toBits
+		</span>
+					([<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$twos_compliment</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$twos_compliment</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoBytes" id="toBytes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">toBytes</span> (line <span class="line-number">521</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a BigInteger to a byte string (eg.</p>
+<p class="description"><p>base-256).</p><p>Negative numbers are saved as positive numbers, unless $twos_compliment is set to true, at which point, they're saved as two's compliment.</p><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('65');
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$a-&gt;toBytes();&nbsp;//&nbsp;outputs&nbsp;chr(65)
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			toBytes
+		</span>
+					([<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$twos_compliment</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$twos_compliment</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoHex" id="toHex"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">toHex</span> (line <span class="line-number">618</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a BigInteger to a hex string (eg.</p>
+<p class="description"><p>base-16)).</p><p>Negative numbers are saved as positive numbers, unless $twos_compliment is set to true, at which point, they're saved as two's compliment.</p><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('65');
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$a-&gt;toHex();&nbsp;//&nbsp;outputs&nbsp;'41'
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			toHex
+		</span>
+					([<span class="var-type">Boolean</span>&nbsp;<span class="var-name">$twos_compliment</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Boolean</span>
+				<span class="var-name">$twos_compliment</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodtoString" id="toString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">toString</span> (line <span class="line-number">682</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts a BigInteger to a base-10 number.</p>
+<p class="description"><p>Here's an example: <div class="src-code"><ol>&lt;?php
+&nbsp;&nbsp;&nbsp;include&nbsp;'Math/BigInteger.php';
+
+&nbsp;&nbsp;&nbsp;$a&nbsp;=&nbsp;new&nbsp;BigInteger('50');
+
+&nbsp;&nbsp;&nbsp;echo&nbsp;$a-&gt;toString();&nbsp;//&nbsp;outputs&nbsp;50
+?&gt;</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">String</span>
+		<span class="method-name">
+			toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__clone" id="__clone"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__clone</span> (line <span class="line-number">770</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">__clone() magic method</p>
+<p class="description"><p>Although you can call BigInteger::__toString() directly in PHP5, you cannot call BigInteger::__clone() directly in PHP5.  You can in PHP4 since it's not a magic method, but in PHP5, you have to call it by using the PHP5 only syntax of $y = clone $x.  As such, if you're trying to write an application that works on both PHP4 and PHP5, call BigInteger::copy(), instead.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> copy()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../BigInteger/BigInteger.html">BigInteger</a></span>
+		<span class="method-name">
+			__clone
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__sleep" id="__sleep"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__sleep</span> (line <span class="line-number">783</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">__sleep() magic method</p>
+<p class="description"><p>Will be called, automatically, when serialize() is called on a BigInteger object.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> __wakeup()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__sleep
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__toString</span> (line <span class="line-number">753</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">__toString() magic method</p>
+<p class="description"><p>Will be called, automatically, if you're supporting just PHP5.  If you're supporting PHP4, you'll need to call toString().</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__wakeup" id="__wakeup"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__wakeup</span> (line <span class="line-number">805</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">__wakeup() magic method</p>
+<p class="description"><p>Will be called, automatically, when unserialize() is called on a BigInteger object.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> __sleep()
+ @</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__wakeup
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 18 Nov 2014 16:45:24 +0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
