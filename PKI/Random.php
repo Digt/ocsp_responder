@@ -95,6 +95,7 @@ if (!function_exists('crypt_random_string')) {
                 return openssl_random_pseudo_bytes($length);
             }
             // method 2
+
             static $fp = true;
             if ($fp === true) {
                 // warning's will be output unles the error suppression operator is used. errors such as

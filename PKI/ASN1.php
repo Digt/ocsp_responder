@@ -114,8 +114,7 @@ define('ASN1_TYPE_ANY',             -2);
  * @author  Jim Wigginton <terrafrost@php.net>
  * @access  public
  */
-class ASN1_Element
-{
+class ASN1_Element{
     /**
      * Raw element value
      *
@@ -138,14 +137,12 @@ class ASN1_Element
 }
 
 /**
- * Pure-PHP ASN.1 Parser
+ * ASN.1 парсер на чистом PHP
  *
  * @package ASN1
- * @author  Jim Wigginton <terrafrost@php.net>
  * @access  public
  */
-class ASN1
-{
+class ASN1{
     /**
      * ASN.1 object identifier
      *
@@ -241,17 +238,16 @@ class ASN1
     );
 
     /**
-     * Default Constructor.
+     * Стандартный конструктор класса.
      *
      * @access public
      */
-    function ASN1()
-    {
+    function ASN1(){
         static $static_init = null;
         if (!$static_init) {
             $static_init = true;
             if (!class_exists('BigInteger')) {
-                include_once 'Math/BigInteger.php';
+                include_once 'BigInteger.php';
             }
         }
     }
@@ -265,8 +261,7 @@ class ASN1
      * @return Array
      * @access public
      */
-    function decodeBER($encoded)
-    {
+    function decodeBER($encoded){
         if (is_object($encoded) && strtolower(get_class($encoded)) == 'asn1_element') {
             $encoded = $encoded->element;
         }

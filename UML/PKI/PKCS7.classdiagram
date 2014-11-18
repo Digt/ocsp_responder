@@ -304,115 +304,6 @@
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <class Id="cd69156f-da6d-4920-9eb3-392dc34d1fb5" name="Util" isAbstract="false" isLeaf="false" isActiveClass="false">
-        <elementDefinition Id="2b01776c-858f-40ab-b53b-b88b91d353c1" />
-        <ownedOperationsInternal>
-          <operation Id="66ddbadf-177b-4b33-aa64-3010816b253b" name="createBuffer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <description>Создание пустого байтового буфера</description>
-            <elementDefinition Id="5f9ce8df-fc44-46e9-a59a-3aef48230aed" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="30781afa-38b7-468f-b3cf-047c79f86d6a" direction="Return" isUnique="false">
-                  <elementDefinition Id="cb92b891-7654-43a2-8dee-6ea8429cfe4d" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="82ad2b0f-f16a-4160-af06-b680659f159c" LastKnownName="Boolean" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="8f1426d9-4089-44b5-ae9a-fc5e59bdc8b4" name="input" direction="In" isUnique="false">
-                  <elementDefinition Id="40541b6b-cf5f-4f91-b906-aa40c608b220" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="bad5a515-5b31-491c-aac8-332f6df003d1" LastKnownName="Byte" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="b794b15a-2f8b-4fa0-895f-179d98b4c3ea" name="bufferFormat" direction="In" isUnique="false">
-                  <elementDefinition Id="7af25aad-780d-4665-b4cd-3c6a11194029" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="4ef23755-b124-46fb-8bb8-f98ff06990b3" LastKnownName="String" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="298b6698-502e-4e03-b2a5-637804620f1b" name="createBuffer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <description>Создание байтового буфера из бинарных данных с заданным форматом</description>
-            <elementDefinition Id="8c7bedb6-de3b-49eb-92ff-3bc6ee11939c" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="da509ab2-2777-49a7-9954-47b89ffcf308" name="input" direction="In" isUnique="false">
-                  <elementDefinition Id="d699bdd8-7838-418b-8108-8d3a81341568" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="4ef23755-b124-46fb-8bb8-f98ff06990b3" LastKnownName="String" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="9b7ac6b0-00f3-4de2-9a4f-6e91ea761b8f" name="bufferFormat" direction="In" isUnique="false">
-                  <elementDefinition Id="75684a49-59f9-4a24-a687-f0d2fc51bc44" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="4ef23755-b124-46fb-8bb8-f98ff06990b3" LastKnownName="String" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="7cd2e5ce-7edf-4330-9fe0-4ad57389a70a" direction="Return">
-                  <elementDefinition Id="761e3468-0069-40df-9ef2-9be7bedc220d" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="76d8a9e7-c95d-4845-840d-a2b20697b5d6" LastKnownName="Boolean" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="3d76beea-87fd-4a5b-801f-a1fa74767b3c" name="createBuffer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="1e1b86b0-5cae-48e8-a067-94602afba120" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="f89fc921-35a3-4e24-990f-981112d1e878" name="input" direction="In" isUnique="false">
-                  <elementDefinition Id="3191fff6-077d-4033-a130-b1243213a1e8" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="4ef23755-b124-46fb-8bb8-f98ff06990b3" LastKnownName="String" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="8d5a197e-1384-430a-9ddb-70d6e5e7a3bd" name="bufferFormat" direction="In" isUnique="false">
-                  <elementDefinition Id="be74ade6-c36b-4dc0-bc73-c3893529c592" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="4ef23755-b124-46fb-8bb8-f98ff06990b3" LastKnownName="String" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="cf12c1d6-378a-4d44-8c72-b40bce6cbbd5" direction="Return" isUnique="false">
-                  <elementDefinition Id="8febbf93-9284-48a2-aa4b-32d47d00e7ac" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="82ad2b0f-f16a-4160-af06-b680659f159c" LastKnownName="Boolean" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-        </ownedOperationsInternal>
-      </class>
-    </logicalClassDesignerModelHasTypes>
-    <logicalClassDesignerModelHasTypes>
-      <enumeration Id="5a0e704e-9d5d-4e98-834d-f74fe1ca29b2" name="bufferFormat" isAbstract="false" isLeaf="false">
-        <elementDefinition Id="204a0f8b-8d49-4ab0-aaed-08e2cddb6719" />
-        <ownedLiterals>
-          <enumerationLiteral Id="1a1c0db0-e1bc-4d74-bc0d-44bf6da0155b" name="raw">
-            <elementDefinition Id="812d18d1-1313-4b66-a61c-95e766f4b637" />
-          </enumerationLiteral>
-          <enumerationLiteral Id="67b1b080-759d-40bf-ae46-abf780141246" name="utf8">
-            <elementDefinition Id="d5f8fd76-76f8-40fd-8b38-cdb5f775d92c" />
-          </enumerationLiteral>
-        </ownedLiterals>
-      </enumeration>
-    </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
       <referencedType Id="4ef23755-b124-46fb-8bb8-f98ff06990b3" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
         <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
@@ -421,16 +312,6 @@
     <packageHasNamedElement>
       <referencedType Id="82ad2b0f-f16a-4160-af06-b680659f159c" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
         <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="76d8a9e7-c95d-4845-840d-a2b20697b5d6" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
-        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="bad5a515-5b31-491c-aac8-332f6df003d1" name="Byte" isAbstract="false" isLeaf="false" cachedFullName="Byte">
-        <elementDefinition Id="9e74e024-a5e1-4ba0-a2f6-4a6f52f2c96b" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -511,6 +392,16 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="9d4f1b24-f167-4588-8701-4e6a3f925294" name="BigInteger" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="c179852b-1b5e-4b0f-830d-d89fa55979d5" />
+        <suppliersInternal>
+          <dependency Id="6cc1e0dd-cc4b-4907-965e-646d3c7ae422">
+            <classMoniker Id="57ba8d51-7b0a-4a27-a3e8-21f45a0cb081" LastKnownName="ASN1" />
+            <elementDefinition Id="752b4f7c-f0e7-40cc-b93c-e09ae16775bd" />
+          </dependency>
+          <dependency Id="8f4daa87-4775-444e-b9cc-1982afdc5bc7">
+            <classMoniker Id="054caf93-efde-46c8-90be-ae420eccb803" LastKnownName="Crypt_RSA" />
+            <elementDefinition Id="30544e93-9e9b-48da-bc28-3617962e2c00" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation Id="4c3ea8fa-9889-46c1-99fe-8d45b1a5d37f" name="BigInteger" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <description>Генерация числа</description>
@@ -1142,6 +1033,12 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="2998e549-fb5a-41a2-9684-967cedc5a9aa" name="X509Certificate" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="0640dfd0-3e4a-40cb-b236-02853e360df4" />
+        <suppliersInternal>
+          <dependency Id="bd9d1ee0-8d21-4717-bd48-4242ae2da701">
+            <classMoniker Id="c398811e-c464-483a-b4cf-4f9bebae2c1d" LastKnownName="PKCS7" />
+            <elementDefinition Id="7b37e21e-93c9-40d5-9254-1646843265cf" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="23167fd4-8239-444d-aff8-389538aaac8e" name="Certificate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="37bea423-020e-4479-8578-5a35e80467a4" />
@@ -2050,6 +1947,116 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="fa2f3b7a-eb8c-4cf1-83e9-9d043b4f4c9b" name="saveCSR" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="61df1c00-9167-4a3e-8d0c-7f756ebc34d9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="288d5259-2ab9-47b0-8350-5fdb984157d3" name="csr" direction="In" isUnique="false">
+                  <elementDefinition Id="bf8b7f14-c0fb-4ff6-9548-1d69eb016a7d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a2fe500f-e4f0-4e01-a8a1-e90951ad3860" LastKnownName="Array" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bdcfc1a8-9cf7-4b8a-b917-434a6866c4c1" name="format" direction="In" isUnique="false">
+                  <elementDefinition Id="ebc9f8ee-24df-4a94-8ccd-fe34161935f4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2c695e34-3a17-4cd5-81f7-e46666b6e24e" LastKnownName="Integer" />
+                  </type_NamedElement>
+                  <defaultValue>
+                    <literalString Id="7b2c6e94-1650-4f9a-8baa-d3ebf64dea75" value="X509Certificate_FORMAT_PEM">
+                      <elementDefinition Id="6c98e05a-9629-4bf4-912e-308e84df4afc" />
+                    </literalString>
+                  </defaultValue>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="01848c81-0996-4eaf-b368-1768e503323f" direction="Return" isUnique="false">
+                  <elementDefinition Id="71f262d1-b0bf-4701-b119-6d7a377e0c40" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4ef23755-b124-46fb-8bb8-f98ff06990b3" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dc2370f6-b533-4eb2-b163-8651936a71e7" name="loadSPKAC" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ee46133e-d906-40cd-9ba8-1533e3308fce" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4a33ab60-8a33-4eda-8f89-1ef8f985d5c9" direction="Return" isUnique="false">
+                  <elementDefinition Id="8b30c2f8-b144-4460-9acd-0f870bb74324" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="778c73e6-7252-43db-bbe8-81cb8dddf834" LastKnownName="Mixed" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6f3eb76c-1f0d-4b33-8583-1dfd4cb6b46a" name="spkac" direction="In" isUnique="false">
+                  <elementDefinition Id="d67a525c-ef47-4e92-b59a-62a116425933" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a2fe500f-e4f0-4e01-a8a1-e90951ad3860" LastKnownName="Array" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6169f50a-3cce-4012-a23c-9760e671bd56" name="saveSPKAC" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2691e3ef-854a-4a3c-83d3-bdbfa684a0c6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1d9f256b-ac03-47e1-9647-ea6be41b3b78" name="spkac" direction="In" isUnique="false">
+                  <elementDefinition Id="a95ccbf4-39b3-46a1-935d-a16e131e234b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a2fe500f-e4f0-4e01-a8a1-e90951ad3860" LastKnownName="Array" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e7ecc2b1-1dde-4d8d-989d-3a6ba27e9cdd" name="format" direction="In" isUnique="false">
+                  <elementDefinition Id="2709d0af-78bf-441d-be23-ff5cb1a08c31" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2c695e34-3a17-4cd5-81f7-e46666b6e24e" LastKnownName="Integer" />
+                  </type_NamedElement>
+                  <defaultValue>
+                    <literalString Id="801f042d-4e68-43d1-8b78-17aadbd82a44" value="X509Certificate_FORMAT_PEM">
+                      <elementDefinition Id="7d91d6a5-264f-4f0c-81f7-afc4c924a3f1" />
+                    </literalString>
+                  </defaultValue>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="52a5a8ad-f373-4d07-bae4-36d97b9fadca" direction="Return" isUnique="false">
+                  <elementDefinition Id="be09df48-3373-4280-bd5a-db19ada7905a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4ef23755-b124-46fb-8bb8-f98ff06990b3" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="751f044a-5b52-41fd-8e6a-143ec45e60d4" name="loadCRL" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="94fef463-4c9d-428d-a67d-2710b1b98c53" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ca0adf40-c789-4873-b85c-8ba445156eed" name="crl" direction="In" isUnique="false">
+                  <elementDefinition Id="1c8c3a09-d572-4a73-894f-2dfab9cf3199" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a2fe500f-e4f0-4e01-a8a1-e90951ad3860" LastKnownName="Array" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="30b6171e-c661-4ad5-ae62-cbeb9053e8d7" direction="Return" isUnique="false">
+                  <elementDefinition Id="4ce7a52b-0fa7-422c-a057-e28d28172c20" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="778c73e6-7252-43db-bbe8-81cb8dddf834" LastKnownName="Mixed" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -2078,6 +2085,33 @@
         <elementDefinition Id="c1702b4b-9147-4204-a54a-f193810fd453" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5f124dc7-c390-4b11-a497-0317408e76c9" name="Crypt_Hash" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="51b6bfe9-fd00-46d6-b7d7-af8d4986b1f0" />
+        <suppliersInternal>
+          <dependency Id="fb146802-d706-460a-be18-39dbd24d3f75">
+            <classMoniker Id="054caf93-efde-46c8-90be-ae420eccb803" LastKnownName="Crypt_RSA" />
+            <elementDefinition Id="23024a54-e78e-49bc-89f6-b045fbf4cb39" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="054caf93-efde-46c8-90be-ae420eccb803" name="Crypt_RSA" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f5b950b2-ca9b-41f4-88b3-550b6f164ea9" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="57ba8d51-7b0a-4a27-a3e8-21f45a0cb081" name="ASN1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3f49b5c8-64ce-4078-aea7-e5c2de994367" />
+        <suppliersInternal>
+          <dependency Id="ad2e731e-1162-431b-80a7-1db8f9c23991">
+            <classMoniker Id="2998e549-fb5a-41a2-9684-967cedc5a9aa" LastKnownName="X509Certificate" />
+            <elementDefinition Id="5346dfdf-23bc-4ca7-9526-d51fd8095b46" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="6048d240-0b90-422a-b431-b5d818c7ffeb" name="trustedCryptoPHP">
     <elementDefinition Id="f8b27276-02be-4935-a866-1d221bdeb036" />

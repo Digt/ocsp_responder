@@ -127,8 +127,7 @@ define('X509Certificate_ATTR_REPLACE', -3); // Clear first, then add a value.
  * @author  Jim Wigginton <terrafrost@php.net>
  * @access  public
  */
-class X509Certificate
-{
+class X509Certificate{
     /**
      * ASN.1 syntax for X.509 certificates
      *
@@ -306,7 +305,7 @@ class X509Certificate
     var $challenge;
 
     /**
-     * Стандартный констурктор класса X509Certificate.
+     * Стандартный конструктор класса X509Certificate.
      *
      * @return X509Certificate
      * @access public
@@ -316,36 +315,37 @@ class X509Certificate
             include_once 'BigInteger.php';
         }
 
-        $this->DirectoryString = [
+             $this->DirectoryString = array(
+                'type'     => ASN1_TYPE_CHOICE,
+                'children' => array(
+                    'teletexString'   => array('type' => ASN1_TYPE_TELETEX_STRING),
+                    'printableString' => array('type' => ASN1_TYPE_PRINTABLE_STRING),
+                    'universalString' => array('type' => ASN1_TYPE_UNIVERSAL_STRING),
+                    'utf8String'      => array('type' => ASN1_TYPE_UTF8_STRING),
+                    'bmpString'       => array('type' => ASN1_TYPE_BMP_STRING)
+                )
+            );
+
+
+        $this->PKCS9String = array(
             'type'     => ASN1_TYPE_CHOICE,
             'children' => array(
-                'teletexString'   => ['type' => ASN1_TYPE_TELETEX_STRING],
-                'printableString' => ['type' => ASN1_TYPE_PRINTABLE_STRING],
-                'universalString' => ['type' => ASN1_TYPE_UNIVERSAL_STRING],
-                'utf8String'      => ['type' => ASN1_TYPE_UTF8_STRING],
-                'bmpString'       => ['type' => ASN1_TYPE_BMP_STRING]
-            )
-        ];
-
-        $this->PKCS9String = [
-            'type'     => ASN1_TYPE_CHOICE,
-            'children' => [
-                'ia5String'       => ['type' => ASN1_TYPE_IA5_STRING],
+                'ia5String'       => array('type' => ASN1_TYPE_IA5_STRING),
                 'directoryString' => $this->DirectoryString
-            ]
-        ];
+            )
+        );
 
-        $this->AttributeValue = ['type' => ASN1_TYPE_ANY];
+        $this->AttributeValue = array('type' => ASN1_TYPE_ANY);
 
-        $AttributeType = ['type' => ASN1_TYPE_OBJECT_IDENTIFIER];
+        $AttributeType = array('type' => ASN1_TYPE_OBJECT_IDENTIFIER);
 
-        $AttributeTypeAndValue = [
+        $AttributeTypeAndValue = array(
             'type'     => ASN1_TYPE_SEQUENCE,
-            'children' => [
+            'children' => array(
                 'type' => $AttributeType,
                 'value'=> $this->AttributeValue
-            ]
-        ];
+            )
+        );
 
         /*
         In practice, RDNs containing multiple name-value pairs (called "multivalued RDNs") are rare,
@@ -354,40 +354,40 @@ class X509Certificate
 
         - https://www.opends.org/wiki/page/DefinitionRelativeDistinguishedName
         */
-        $this->RelativeDistinguishedName = [
+        $this->RelativeDistinguishedName = array(
             'type'     => ASN1_TYPE_SET,
             'min'      => 1,
             'max'      => -1,
             'children' => $AttributeTypeAndValue
-        ];
+        );
 
         // http://tools.ietf.org/html/rfc5280#section-4.1.2.4
-        $RDNSequence = [
+        $RDNSequence = array(
             'type'     => ASN1_TYPE_SEQUENCE,
             // RDNSequence does not define a min or a max, which means it doesn't have one
             'min'      => 0,
             'max'      => -1,
             'children' => $this->RelativeDistinguishedName
-        ];
+        );
 
-        $this->Name = [
+        $this->Name = array(
             'type'     => ASN1_TYPE_CHOICE,
-            'children' => [
+            'children' => array(
                 'rdnSequence' => $RDNSequence
-            ]
-        ];
+            )
+        );
 
         // http://tools.ietf.org/html/rfc5280#section-4.1.1.2
-        $AlgorithmIdentifier = [
+        $AlgorithmIdentifier = array(
             'type'     => ASN1_TYPE_SEQUENCE,
-            'children' => [
-                'algorithm'  => ['type' => ASN1_TYPE_OBJECT_IDENTIFIER],
-                'parameters' => [
+            'children' => array(
+                'algorithm'  => array('type' => ASN1_TYPE_OBJECT_IDENTIFIER),
+                'parameters' => array(
                                     'type'     => ASN1_TYPE_ANY,
                                     'optional' => true
-                                ]
-            ]
-        ];
+                                )
+            )
+        );
 
         /*
            A certificate using system MUST reject the certificate if it encounters
@@ -396,74 +396,74 @@ class X509Certificate
 
            http://tools.ietf.org/html/rfc5280#section-4.2
         */
-        $Extension = [
+        $Extension = array(
             'type'     => ASN1_TYPE_SEQUENCE,
-            'children' => [
-                'extnId'   => ['type' => ASN1_TYPE_OBJECT_IDENTIFIER],
-                'critical' => [
+            'children' => array(
+                'extnId'   => array('type' => ASN1_TYPE_OBJECT_IDENTIFIER),
+                'critical' => array(
                                   'type'     => ASN1_TYPE_BOOLEAN,
                                   'optional' => true,
                                   'default'  => false
-                              ],
-                'extnValue' => ['type' => ASN1_TYPE_OCTET_STRING]
-            ]
-        ];
+                              ),
+                'extnValue' => array('type' => ASN1_TYPE_OCTET_STRING)
+            )
+        );
 
-        $this->Extensions = [
+        $this->Extensions = array(
             'type'     => ASN1_TYPE_SEQUENCE,
             'min'      => 1,
             // technically, it's MAX, but we'll assume anything < 0 is MAX
             'max'      => -1,
             // if 'children' isn't an array then 'min' and 'max' must be defined
             'children' => $Extension
-        ];
+        );
 
-        $SubjectPublicKeyInfo = [
+        $SubjectPublicKeyInfo = array(
             'type'     => ASN1_TYPE_SEQUENCE,
-            'children' => [
+            'children' => array(
                 'algorithm'        => $AlgorithmIdentifier,
-                'subjectPublicKey' => ['type' => ASN1_TYPE_BIT_STRING]
-            ]
-        ];
+                'subjectPublicKey' => array('type' => ASN1_TYPE_BIT_STRING)
+            )
+        );
 
-        $UniqueIdentifier = ['type' => ASN1_TYPE_BIT_STRING];
+        $UniqueIdentifier = array('type' => ASN1_TYPE_BIT_STRING);
 
-        $Time = [
+        $Time = array(
             'type'     => ASN1_TYPE_CHOICE,
-            'children' => [
-                'utcTime'     => ['type' => ASN1_TYPE_UTC_TIME],
-                'generalTime' => ['type' => ASN1_TYPE_GENERALIZED_TIME]
-            ]
-        ];
+            'children' => array(
+                'utcTime'     => array('type' => ASN1_TYPE_UTC_TIME),
+                'generalTime' => array('type' => ASN1_TYPE_GENERALIZED_TIME)
+            )
+        );
 
         // http://tools.ietf.org/html/rfc5280#section-4.1.2.5
-        $Validity = [
+        $Validity = array(
             'type'     => ASN1_TYPE_SEQUENCE,
-            'children' => [
+            'children' => array(
                 'notBefore' => $Time,
                 'notAfter'  => $Time
-            ]
-        ];
+            )
+        );
 
-        $CertificateSerialNumber = ['type' => ASN1_TYPE_INTEGER];
+        $CertificateSerialNumber = array('type' => ASN1_TYPE_INTEGER);
 
-        $Version = [
+        $Version = array(
             'type'    => ASN1_TYPE_INTEGER,
-            'mapping' => ['v1', 'v2', 'v3']
-        ];
+            'mapping' => array('v1', 'v2', 'v3')
+        );
 
         // assert($TBSCertificate['children']['signature'] == $Certificate['children']['signatureAlgorithm'])
-        $TBSCertificate = [
+        $TBSCertificate = array(
             'type'     => ASN1_TYPE_SEQUENCE,
-            'children' => [
+            'children' => array(
                 // technically, default implies optional, but we'll define it as being optional, none-the-less, just to
                 // reenforce that fact
-                'version'             => [
+                'version'             => array(
                                              'constant' => 0,
                                              'optional' => true,
                                              'explicit' => true,
                                              'default'  => 'v1'
-                                         ] + $Version,
+                                         ) + $Version,
                 'serialNumber'         => $CertificateSerialNumber,
                 'signature'            => $AlgorithmIdentifier,
                 'issuer'               => $this->Name,
@@ -471,38 +471,38 @@ class X509Certificate
                 'subject'              => $this->Name,
                 'subjectPublicKeyInfo' => $SubjectPublicKeyInfo,
                 // implicit means that the T in the TLV structure is to be rewritten, regardless of the type
-                'issuerUniqueID'       => [
+                'issuerUniqueID'       => array(
                                                'constant' => 1,
                                                'optional' => true,
                                                'implicit' => true
-                                           ] + $UniqueIdentifier,
-                'subjectUniqueID'       => [
+                                           ) + $UniqueIdentifier,
+                'subjectUniqueID'       => array(
                                                'constant' => 2,
                                                'optional' => true,
                                                'implicit' => true
-                                           ] + $UniqueIdentifier,
+                                           ) + $UniqueIdentifier,
                 // <http://tools.ietf.org/html/rfc2459#page-74> doesn't use the EXPLICIT keyword but if
                 // it's not IMPLICIT, it's EXPLICIT
-                'extensions'            => [
+                'extensions'            => array(
                                                'constant' => 3,
                                                'optional' => true,
                                                'explicit' => true
-                                           ] + $this->Extensions
-            ]
-        ];
+                                           ) + $this->Extensions
+            )
+        );
 
-        $this->Certificate = [
+        $this->Certificate = array(
             'type'     => ASN1_TYPE_SEQUENCE,
-            'children' => [
+            'children' => array(
                  'tbsCertificate'     => $TBSCertificate,
                  'signatureAlgorithm' => $AlgorithmIdentifier,
                  'signature'          => array('type' => ASN1_TYPE_BIT_STRING)
-            ]
-        ];
+            )
+        );
 
-        $this->KeyUsage = [
+        $this->KeyUsage = array(
             'type'    => ASN1_TYPE_BIT_STRING,
-            'mapping' => [
+            'mapping' => array(
                 'digitalSignature',
                 'nonRepudiation',
                 'keyEncipherment',
@@ -512,62 +512,62 @@ class X509Certificate
                 'cRLSign',
                 'encipherOnly',
                 'decipherOnly'
-            ]
-        ];
+            )
+        );
 
-        $this->BasicConstraints = [
+        $this->BasicConstraints = array(
             'type'     => ASN1_TYPE_SEQUENCE,
-            'children' => [
-                'cA'                => [
+            'children' => array(
+                'cA'                => array(
                                                  'type'     => ASN1_TYPE_BOOLEAN,
                                                  'optional' => true,
                                                  'default'  => false
-                                       ],
-                'pathLenConstraint' => [
+                                       ),
+                'pathLenConstraint' => array(
                                                  'type' => ASN1_TYPE_INTEGER,
                                                  'optional' => true
-                                       ]
-            ]
-        ];
+                                       )
+            )
+        );
 
-        $this->KeyIdentifier = ['type' => ASN1_TYPE_OCTET_STRING];
+        $this->KeyIdentifier = array('type' => ASN1_TYPE_OCTET_STRING);
 
-        $OrganizationalUnitNames = [
+        $OrganizationalUnitNames = array(
             'type'     => ASN1_TYPE_SEQUENCE,
             'min'      => 1,
             'max'      => 4, // ub-organizational-units
             'children' => array('type' => ASN1_TYPE_PRINTABLE_STRING)
-        ];
+        );
 
-        $PersonalName = [
+        $PersonalName = array(
             'type'     => ASN1_TYPE_SET,
-            'children' => [
-                'surname'              => [
+            'children' => array(
+                'surname'              => array(
                                            'type' => ASN1_TYPE_PRINTABLE_STRING,
                                            'constant' => 0,
                                            'optional' => true,
                                            'implicit' => true
-                                         ],
-                'given-name'           => [
+                                         ),
+                'given-name'           => array(
                                            'type' => ASN1_TYPE_PRINTABLE_STRING,
                                            'constant' => 1,
                                            'optional' => true,
                                            'implicit' => true
-                                         ],
-                'initials'             => [
+                                         ),
+                'initials'             => array(
                                            'type' => ASN1_TYPE_PRINTABLE_STRING,
                                            'constant' => 2,
                                            'optional' => true,
                                            'implicit' => true
-                                         ],
+                                         ),
                 'generation-qualifier' => array(
                                            'type' => ASN1_TYPE_PRINTABLE_STRING,
                                            'constant' => 3,
                                            'optional' => true,
                                            'implicit' => true
                                          )
-            ]
-        ];
+            )
+        );
 
         $NumericUserIdentifier = array('type' => ASN1_TYPE_NUMERIC_STRING);
 
@@ -2871,7 +2871,7 @@ class X509Certificate
     }
 
     /**
-     * Save CSR request
+     * Сохранить запрос CSR
      *
      * @param Array $csr
      * @param Integer $format optional
@@ -2918,13 +2918,13 @@ class X509Certificate
     }
 
     /**
-     * Load a SPKAC CSR
+     * Загрузка (чтение) SPKAC CSR
      *
-     * SPKAC's are produced by the HTML5 keygen element:
+     * SPKAC's получается через элемент keygen HTML5:
      *
      * https://developer.mozilla.org/en-US/docs/HTML/Element/keygen
      *
-     * @param String $csr
+     * @param Array $spkac
      * @access public
      * @return Mixed
      */
@@ -2995,9 +2995,9 @@ class X509Certificate
     }
 
     /**
-     * Save a SPKAC CSR request
+     * Сохранение запроса SPKAC CSR
      *
-     * @param Array $csr
+     * @param Array $spkac
      * @param Integer $format optional
      * @access public
      * @return String
@@ -3037,9 +3037,9 @@ class X509Certificate
     }
 
     /**
-     * Load a Certificate Revocation List
+     * Загрузка (чтение) Certificate Revocation List
      *
-     * @param String $crl
+     * @param Array $crl
      * @access public
      * @return Mixed
      */
@@ -3091,7 +3091,7 @@ class X509Certificate
     }
 
     /**
-     * Save Certificate Revocation List.
+     * Сохранение Certificate Revocation List.
      *
      * @param Array $crl
      * @param Integer $format optional
@@ -3147,7 +3147,7 @@ class X509Certificate
     }
 
     /**
-     * Helper function to build a time field according to RFC 3280 section
+     * Вспомогательная функция, которая приводит дату в соответствие стандарту RFC 3280, разделы:
      *  - 4.1.2.5 Validity
      *  - 5.1.2.4 This Update
      *  - 5.1.2.5 Next Update
@@ -3168,7 +3168,7 @@ class X509Certificate
     }
 
     /**
-     * Sign an X.509 certificate
+     * Подпись сертификата X.509
      *
      * $issuer's private key needs to be loaded.
      * $subject can be either an existing X.509 cert (if you want to resign it),
@@ -3339,7 +3339,7 @@ class X509Certificate
     }
 
     /**
-     * Sign a CSR
+     * Подпись запроса CSR
      *
      * @access public
      * @return Mixed
@@ -3396,7 +3396,7 @@ class X509Certificate
     }
 
     /**
-     * Sign a SPKAC
+     * Подпись SPKAC
      *
      * @access public
      * @return Mixed
@@ -3460,7 +3460,7 @@ class X509Certificate
     }
 
     /**
-     * Sign a CRL
+     * Подпись CRL
      *
      * $issuer's private key needs to be loaded.
      *
@@ -3586,7 +3586,7 @@ class X509Certificate
     }
 
     /**
-     * X.509 certificate signing helper function.
+     * Вспомогательная функция подписи сертификата X.509
      *
      * @param Object $key
      * @param X509Certificate $subject
@@ -3617,7 +3617,7 @@ class X509Certificate
     }
 
     /**
-     * Set certificate start date
+     * Установка даты начала действия сертификата
      *
      * @param String $date
      * @access public
@@ -3627,7 +3627,7 @@ class X509Certificate
     }
 
     /**
-     * Set certificate end date
+     * Установка даты окончания действия сертификата
      *
      * @param String $date
      * @access public
@@ -3651,7 +3651,7 @@ class X509Certificate
     }
 
     /**
-     * Set Serial Number
+     * Установка серийного номера
      *
      * @param String $serial
      * @param $base optional
@@ -3662,7 +3662,7 @@ class X509Certificate
     }
 
     /**
-     * Turns the certificate into a certificate authority
+     * Отзыв сертификата в центре сертификации
      *
      * @access public
      */
@@ -3674,7 +3674,7 @@ class X509Certificate
      * Get a reference to a subarray
      *
      * @param array $root
-     * @param String $path  absolute path with / as component separator
+     * @param String $path  absolute path with / as component sepрarator
      * @param Boolean $create optional
      * @access private
      * @return array item ref or false
@@ -3881,7 +3881,7 @@ class X509Certificate
     }
 
     /**
-     * Get a certificate, CSR or CRL Extension
+     * Получить сертификат, CSR или расширение CRL
      *
      * Returns the extension if it exists and false if not
      *
@@ -3895,7 +3895,7 @@ class X509Certificate
     }
 
     /**
-     * Returns a list of all extensions in use in certificate, CSR or CRL
+     * Получение списка всех расширений, используемых в сертификате, CSR или CRL
      *
      * @param array $cert optional
      * @access public
@@ -4273,7 +4273,7 @@ class X509Certificate
     }
 
     /**
-     * Get the index of a revoked certificate.
+     * Получить индекс аннулированного сертификата.
      *
      * @param array $rclist
      * @param String $serial
@@ -4301,7 +4301,7 @@ class X509Certificate
     }
 
     /**
-     * Revoke a certificate.
+     * Отозвать (аннулировать) сертификат.
      *
      * @param String $serial
      * @param String $date optional
@@ -4328,7 +4328,7 @@ class X509Certificate
     }
 
     /**
-     * Unrevoke a certificate.
+     * Возобновить действие сертификата.
      *
      * @param String $serial
      * @access public
@@ -4347,7 +4347,7 @@ class X509Certificate
     }
 
     /**
-     * Get a revoked certificate.
+     * Получить аннулированный сертификат.
      *
      * @param String $serial
      * @access public
@@ -4364,7 +4364,7 @@ class X509Certificate
     }
 
     /**
-     * List revoked certificates
+     * Список аннулированных сертификатов
      *
      * @param array $crl optional
      * @access public
@@ -4391,7 +4391,7 @@ class X509Certificate
     }
 
     /**
-     * Remove a Revoked Certificate Extension
+     * Удалить расширение аннулированного сертификата
      *
      * @param String $serial
      * @param String $id
@@ -4409,7 +4409,7 @@ class X509Certificate
     }
 
     /**
-     * Get a Revoked Certificate Extension
+     * Получить расширение аннулированного сертификата
      *
      * Returns the extension if it exists and false if not
      *
@@ -4434,7 +4434,7 @@ class X509Certificate
     }
 
     /**
-     * Returns a list of all extensions in use for a given revoked certificate
+     * Получить список всех расширений, которые использовались в аннулированном сертификате
      *
      * @param String $serial
      * @param array $crl optional
@@ -4456,7 +4456,7 @@ class X509Certificate
     }
 
     /**
-     * Set a Revoked Certificate Extension
+     * Установка Revoked Certificate Extension
      *
      * @param String $serial
      * @param String $id
@@ -4479,7 +4479,7 @@ class X509Certificate
     }
 
     /**
-     * Extract raw BER from Base64 encoding
+     * Извлечение raw BER из кодировки Base64
      *
      * @access private
      * @param String $str

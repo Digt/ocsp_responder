@@ -1009,6 +1009,22 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="752b4f7c-f0e7-40cc-b93c-e09ae16775bd">
+            <classMoniker
+              Id="3f49b5c8-64ce-4078-aea7-e5c2de994367"
+              LastKnownName="ASN1"
+              LastKnownLocation="trustedJS.uml" />
+          </dependency>
+          <dependency
+            Id="30544e93-9e9b-48da-bc28-3617962e2c00">
+            <classMoniker
+              Id="f5b950b2-ca9b-41f4-88b3-550b6f164ea9"
+              LastKnownName="Crypt_RSA"
+              LastKnownLocation="trustedJS.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="e58ed2bb-a428-47c5-a66b-0b0ff093cc4f"
@@ -1917,6 +1933,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="7b37e21e-93c9-40d5-9254-1646843265cf">
+            <classMoniker
+              Id="c43ca2a6-3db0-4c7d-be82-a5a17a93de26"
+              LastKnownName="PKCS7"
+              LastKnownLocation="trustedJS.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="37bea423-020e-4479-8578-5a35e80467a4"
@@ -3772,7 +3797,249 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="61df1c00-9167-4a3e-8d0c-7f756ebc34d9"
+            name="saveCSR"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="bf8b7f14-c0fb-4ff6-9548-1d69eb016a7d"
+                  name="csr"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3c9d932b-a94e-4e47-8e04-efe19c2c6cc0"
+                      LastKnownName="Array"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ebc9f8ee-24df-4a94-8ccd-fe34161935f4"
+                  name="format"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                  <defaultValue>
+                    <literalString
+                      Id="6c98e05a-9629-4bf4-912e-308e84df4afc"
+                      value="X509Certificate_FORMAT_PEM" />
+                  </defaultValue>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="71f262d1-b0bf-4701-b119-6d7a377e0c40"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ee46133e-d906-40cd-9ba8-1533e3308fce"
+            name="loadSPKAC"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8b30c2f8-b144-4460-9acd-0f870bb74324"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e7b200db-e3fb-4f0f-8e6d-28cea9c0cf94"
+                      LastKnownName="Mixed"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d67a525c-ef47-4e92-b59a-62a116425933"
+                  name="spkac"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3c9d932b-a94e-4e47-8e04-efe19c2c6cc0"
+                      LastKnownName="Array"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2691e3ef-854a-4a3c-83d3-bdbfa684a0c6"
+            name="saveSPKAC"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a95ccbf4-39b3-46a1-935d-a16e131e234b"
+                  name="spkac"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3c9d932b-a94e-4e47-8e04-efe19c2c6cc0"
+                      LastKnownName="Array"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="2709d0af-78bf-441d-be23-ff5cb1a08c31"
+                  name="format"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                  <defaultValue>
+                    <literalString
+                      Id="7d91d6a5-264f-4f0c-81f7-afc4c924a3f1"
+                      value="X509Certificate_FORMAT_PEM" />
+                  </defaultValue>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="be09df48-3373-4280-bd5a-db19ada7905a"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="94fef463-4c9d-428d-a67d-2710b1b98c53"
+            name="loadCRL"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1c8c3a09-d572-4a73-894f-2dfab9cf3199"
+                  name="crl"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="3c9d932b-a94e-4e47-8e04-efe19c2c6cc0"
+                      LastKnownName="Array"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4ce7a52b-0fa7-422c-a057-e28d28172c20"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e7b200db-e3fb-4f0f-8e6d-28cea9c0cf94"
+                      LastKnownName="Mixed"
+                      LastKnownLocation="trustedJS.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="51b6bfe9-fd00-46d6-b7d7-af8d4986b1f0"
+        name="Crypt_Hash"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="23024a54-e78e-49bc-89f6-b045fbf4cb39">
+            <classMoniker
+              Id="f5b950b2-ca9b-41f4-88b3-550b6f164ea9"
+              LastKnownName="Crypt_RSA"
+              LastKnownLocation="trustedJS.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f5b950b2-ca9b-41f4-88b3-550b6f164ea9"
+        name="Crypt_RSA"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8357b447-3373-4ca0-a547-553de7262192"
+        name="Class3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3f49b5c8-64ce-4078-aea7-e5c2de994367"
+        name="ASN1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="5346dfdf-23bc-4ca7-9526-d51fd8095b46">
+            <classMoniker
+              Id="0640dfd0-3e4a-40cb-b236-02853e360df4"
+              LastKnownName="X509Certificate"
+              LastKnownLocation="trustedJS.uml" />
+          </dependency>
+        </suppliersInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>
